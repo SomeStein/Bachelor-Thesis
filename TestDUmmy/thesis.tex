@@ -1,0 +1,153 @@
+\documentclass[10pt, a4paper, titlepage]{article}
+
+% Encodings und Fonts -----------------------------------
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{textcomp}
+\usepackage{microtype}
+% -------------------------------------------------------
+
+% Spracheinstellungen -----------------------------------
+% Verwende option `english` für englische Texte
+\usepackage[english]{babel}
+\usepackage{csquotes}
+% -------------------------------------------------------
+
+% Bibliographie -----------------------------------------
+\usepackage[backend=biber,
+			style=numeric,
+			isbn=false,
+			doi=false
+			]{biblatex}
+\addbibresource{./content/references.bib}
+% -------------------------------------------------------
+
+% Bessere Tabellen --------------------------------------
+\usepackage{tabularx}
+% -------------------------------------------------------
+
+% Typographie -------------------------------------------
+\renewcommand{\theenumi}{(\roman{enumi})}
+\usepackage{graphicx}
+\usepackage{setspace}
+% -------------------------------------------------------
+
+% Mathe Pakete, Einstellungen und Commands --------------
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+\numberwithin{equation}{section}
+
+\newcommand*{\N}{\mathbb{N}}
+\newcommand*{\Z}{\mathbb{Z}}
+\newcommand*{\Q}{\mathbb{Q}}
+\newcommand*{\R}{\mathbb{R}}
+\newcommand*{\C}{\mathbb{C}}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\kernel}{ker}
+\DeclareMathOperator{\im}{im}
+% -------------------------------------------------------
+
+% Theorem-Umgebungen ------------------------------------
+\usepackage{thmtools}
+
+\declaretheorem[
+	name=Theorem,
+	numberwithin=section
+	]{thm}
+\declaretheorem[
+	name=Lemma,
+	sibling=thm,
+	]{lem}
+\declaretheorem[
+	name=Proposition,
+	sibling=thm,
+	]{prop}
+\declaretheorem[
+	name=Korollar,
+	sibling=thm,
+	]{cor}
+
+\declaretheorem[
+	name=Definition,
+	style=definition,
+	numbered=no,
+	]{defin}
+
+\declaretheorem[
+	name=Bemerkung,
+	style=remark,
+	numbered=no
+	]{rem}	
+\declaretheorem[
+	name=Beispiel,
+	style=remark,
+	numbered=no
+	]{exam}
+% -------------------------------------------------------
+
+% Eigene Commands ---------------------------------------
+\newcommand{\dummy}{Donaudampfschifffahrtsgesellschaft}
+% -------------------------------------------------------
+
+% Hyperref (immer am Schluss der Präambel!) -------------
+\usepackage[pdftex,pdfpagelabels]{hyperref}
+\hypersetup{pdftitle={Beweis des Satz von Thales},
+			pdfauthor={Maxime Musterfrau}}
+% -------------------------------------------------------
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Beginn des Dokuments
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+% Titelei -----------------------------------------------
+\hypersetup{pageanchor=false}
+\input{./content/titlepage}
+
+\newpage
+
+\thispagestyle{empty}
+
+\input{./content/abstract}
+
+\newpage
+
+%\thispagestyle{empty}
+\tableofcontents
+
+\newpage
+% -------------------------------------------------------
+\hypersetup{pageanchor=true}
+\renewcommand{\thepage}{ \arabic{page} }
+
+\setcounter{page}{1}
+\onehalfspacing
+
+\section{Beispiel-Abschnitt}
+\input{./content/abschnitt}
+
+\section{Introduction}
+\input{./content/intro}
+
+\section{Random Walk}
+
+\section{Size Exclusion}
+
+\section{Heat Equation}
+
+\section{Simulations}
+
+\section{Stability and Precision}
+
+\section{Conclusion}
+
+\section{Outlook}
+
+\vspace{\fill}
+\printbibliography{}
+\end{document}

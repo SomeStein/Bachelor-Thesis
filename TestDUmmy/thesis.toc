@@ -1,0 +1,36 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\babel@toc {english}{}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1}Beispiel-Abschnitt}{ 1 }{section.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.1}Matrizen}{ 1 }{subsection.1.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.2}Zitieren mit bibtex}{ 2 }{subsection.1.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.3}Abbildungen}{ 2 }{subsection.1.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.4}Tabellen}{ 3 }{subsection.1.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.5}Introduction}{ 3 }{subsection.1.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.6}Random Walk}{ 3 }{subsection.1.6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.7}Size Exclusion}{ 3 }{subsection.1.7}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.8}Heat Equation}{ 4 }{subsection.1.8}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2}Introduction}{ 4 }{section.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3}Random Walk}{ 4 }{section.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4}Size Exclusion}{ 4 }{section.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5}Heat Equation}{ 4 }{section.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6}Simulations}{ 4 }{section.6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7}Stability and Precision}{ 4 }{section.7}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {8}Conclusion}{ 4 }{section.8}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {9}Outlook}{ 4 }{section.9}%
