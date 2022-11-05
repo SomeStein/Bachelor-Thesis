@@ -7,79 +7,77 @@ import math
 import os
 import time
 
-# initial conditions
-board_size = (100, 100)
-zero_frame = np.zeros(board_size)
-n_steps = 5000
-n_walkers = 1000
+start = time.time()
+
+count1 = 0
+count2 = 0
+
+#PARAMETERS
+id = 97
+board_size = 100
+n_steps = 1000
+n_walkers = 100
 n_iter = 10000
 anim_speed = 10
+zero_frame = np.zeros((board_size, board_size))
 
-# switch for step choices
-switch = {
-    1: [1, 0],
-    2: [-1, 0],
-    3: [0, 1],
-    4: [0, -1],
-    5: [0,0]
-}
+ende1 = time.time()
 
-# Agent class for random walk
+#WALKER CLASS
 class Walker:
     def __init__(self, x, y):
 
-        self.x = x
-        self.y = y
+        self.pos = np.array([x, y])
 
-    def __str__(self):
-        return "walker koordinates: " + str(self.coords)
+        # step choices
+        self.dirs = np.array([
+            [1, 0],
+            [-1, 0],
+            [0, 1],
+            [0, -1],
+            [0, 0]
+        ])
 
-    def move(self, frame):
-        step = switch.get(r.randint(1, len(switch)))
-        s_x = (self.x + step[0]) % board_size[0]
-        s_y = (self.y + step[1]) % board_size[1]
+    def move(self, frame, count1):
+        step = r.choice(self.dirs)
+        s_x, s_y = (self.pos + step) % board_size
 
-        if 1: #frame[s_x , s_y] == 0:
-            frame[self.x, self.y] = 0
-            self.x = s_x
-            self.y = s_y
+        if 1: #frame[s_x, s_y] == 0:
+            count1 +=1
+            frame[self.pos[0], self.pos[1]] = 0
+            self.pos = np.array([s_x, s_y])
 
-        frame[self.x, self.y] = 1
+        frame[self.pos[0], self.pos[1]] = 1
+        return count1
 
+ende2 = time.time()
 
-# für jede iteration neues frame berechnen durch move der walker  new frame = walker.move
-# alle frames aus diesem step aus allen iterationen zusammen addieren und in added_frames[n] speichern
+#INITIALIZING ARRAYS
 frames = []
 walkers = []
 added_frames = []
 
+for i in range(n_iter):
+    frames.append(zero_frame.copy())
+    walkers.append([])
+    for j in range(n_walkers):
+        walkers[i].append(
+            Walker(math.floor(board_size/2), math.floor(board_size/2)))
 
-for n in range(n_steps):
-    if n == 0:
-        start = time.time()
-    if n == 10:
-        delta = time.time() - start
-        print("It will take roughly: ", delta*(n_steps-10)/10, " seconds")
-    print(n/n_steps)
+ende3 = time.time()
 
-    added_frame = zero_frame.copy()
-
+#MAIN LOOP
+for k in range(n_steps):
     for i in range(n_iter):
-        if n == 0:
-            frames.append(zero_frame.copy())
-            walkers.append([])
         for j in range(n_walkers):
-            if n == 0:
-                walkers[i].append(
-                    Walker(math.floor(board_size[0]/2), math.floor(board_size[1]/2)))
-            walkers[i][j].move(frames[i])
-        added_frame = np.add(added_frame, frames[i])
-    added_frames.append(added_frame)
+            count1 = walkers[i][j].move(frames[i],count1)
+            count2+=1
+    added_frames.append(sum(frames))
+    print(k/n_steps)
 
-print("Anzahl der Frames: ", len(frames))
-print("Anzahl der Walker: ", len(walkers)*len(walkers[0]))
-print("Anzahl der added Frames: ", len(added_frames))
+ende4 = time.time()
 
+#ANIMATION
 if 1:
     # Update Function for Animation
     def update(i):
@@ -88,7 +86,8 @@ if 1:
         ax.set_title('2D Random walk without SE')
         ax.get_xaxis().set_visible(False)
         ax.get_yaxis().set_visible(False)
-        map = ax.matshow(added_frames[i*anim_speed], cmap='gray',vmin=0, vmax=n_iter*n_walkers/(board_size[0]*board_size[1])*2)
+        map = ax.matshow(added_frames[i*anim_speed], cmap='gray', vmin=0,
+                         vmax=n_iter*n_walkers/(board_size*board_size)*2)
         #cb = fig.colorbar(map)
 
     # Animation
@@ -100,4 +99,16 @@ if 1:
         interval=60
     )
 
-    animation.save('Solves/randomWalkTest.gif')
+    animation.save(f'Resources/Solves/{id}RandomWalk2D.gif')
+
+ende5 = time.time()
+
+print("\n",f"denied moves: {count2 - count1}")
+print("\n","Timing: ")
+print(f"Total: {ende5 - start}")
+print(f" Loading Parameters: {ende1 - start}")
+print(f" Loading Walker class: {ende2 - ende1}")
+print(f" Initializing Arrays: {ende3 - ende2}")
+print(f" Main Loop: {ende4 - ende3}")
+print(f" Animation: {ende5 - ende4}")
+
