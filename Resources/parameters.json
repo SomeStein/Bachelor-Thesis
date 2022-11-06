@@ -1,9 +1,9 @@
 {
-   "name": "Test",
-   "board_size": 100,
-   "n_steps": 1000,
-   "n_walkers": 1000,
+   "name": "",
+   "board_size": 50,
+   "n_steps": 500,
+   "n_walkers": 100,
    "n_iter": 10000,
-   "anim_speed": 5,
+   "anim_speed": 1,
    "size_exclusion": "without"
 }

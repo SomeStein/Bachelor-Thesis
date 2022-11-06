@@ -1,4 +1,6 @@
-import Walker
+from Walker import *
+from csvExport import *
+from animation import *
 import json
 
 print("\nStarting main...\n")
@@ -10,12 +12,12 @@ parameter_values = list(parameters.values())
 
 
 # Calculating boards
-iterated_boards = Walker.calc_iterated_boards(parameter_values)
+iterated_boards = calc_iterated_boards(parameter_values)
 
 
 # Saving iterated boards as CSV
-#Walker.export_as_csv(iterated_boards, parameter_values)
+export_as_csv(iterated_boards, parameter_values)
 
 
 # Create animation
-Walker.animate(iterated_boards, parameter_values)
+animate(iterated_boards, parameter_values)

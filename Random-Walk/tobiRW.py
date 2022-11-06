@@ -4,9 +4,9 @@ from matplotlib.animation import FuncAnimation
 import random
 import time
 
-n = 10
-n_steps = 100
-n_iterations = 100000
+n = 1000
+n_steps = 1000
+n_iterations = 1000
 n_matrix = 100
 
 frame_list = np.zeros((n_steps+1,n_matrix,n_matrix))
@@ -31,7 +31,7 @@ for k in range(n_iterations):
       walkers = np.array(list(map(move, walkers ))).clip(0,99)
       frame_list[frame, walkers[:,0], walkers[:,1]] += 1
    print(f"Iteration {k}/{n_iterations}", end="\r")
-
-print(time.time() - start_time)
+   if k == 10:
+      print((time.time() - start_time)*n_iterations/10)
 
 frame_list = np.array(frame_list)
