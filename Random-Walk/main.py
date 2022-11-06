@@ -1,6 +1,8 @@
 import Walker
 import json
 
+print("\nStarting main...\n")
+
 # Loading parameters for simulation
 with open('Resources/parameters.json') as json_file:
     parameters = json.load(json_file)
