@@ -76,6 +76,7 @@ def calc_iterated_boards(params):
     # MAIN LOOP
     start = time.time()
     last_time = start
+    frames = np.array(frames)
     for k in range(n_steps):
         added_frames.append(sum(frames))
         for i in range(n_iter):
@@ -87,4 +88,4 @@ def calc_iterated_boards(params):
             printProgressBar(k, n_steps-1, start, length=30,
                              prefix="Calculating iterations ")
 
-    return added_frames
+    return np.array(added_frames)

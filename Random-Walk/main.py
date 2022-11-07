@@ -20,5 +20,6 @@ iterated_boards = calc_iterated_boards(parameter_values)
 
 
 # Create animation
-iterated_boards/=parameters["n_iter"]
+
+iterated_boards = iterated_boards/parameters["n_iter"]
 animate(iterated_boards, parameter_values)
