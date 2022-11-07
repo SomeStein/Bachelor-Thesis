@@ -1,9 +1,9 @@
 {
-   "name": "",
+   "name": "optimized",
    "board_size": 50,
    "n_steps": 500,
    "n_walkers": 100,
-   "n_iter": 10000,
+   "n_iter": 100,
    "anim_speed": 1,
-   "size_exclusion": "without"
+   "size_exclusion": "with"
 }

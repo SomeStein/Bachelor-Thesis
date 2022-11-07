@@ -20,20 +20,22 @@ class Walker:
             [0, -1]
         ])
 
+        self.stay_chance = 1/len(self.dirs)
+
     def __str__(self) -> str:
         return f"{self.pos[0]} {self.pos[1]}"
 
     def move(self, frame, SE):
 
-        if r.random() < 1/5:
+        if r.random() < self.stay_chance:
             return
         step = r.choice(self.dirs)
-        s_x, s_y = (self.pos.copy() + step) % self.board_size
+        step = (self.pos.copy() + step) % self.board_size
 
-        if (frame[s_x, s_y] == 0 and SE == "with") or SE == "without":
-            frame[self.pos[0], self.pos[1]] -= 1
-            self.pos = np.array([s_x, s_y])
-            frame[self.pos[0], self.pos[1]] += 1
+        if SE == "without" or frame[step[0],step[1]] == 0:
+            frame[self.pos[0],self.pos[1]] -= 1
+            self.pos = step
+            frame[self.pos[0],self.pos[1]] += 1
 
 
 # CALCULATION
