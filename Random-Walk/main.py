@@ -16,10 +16,9 @@ iterated_boards = calc_iterated_boards(parameter_values)
 
 
 # Saving iterated boards as CSV
-# export_as_csv(iterated_boards, parameter_values)
+export_as_csv(iterated_boards, parameter_values)
 
 
 # Create animation
-
 iterated_boards = iterated_boards/parameters["n_iter"]
 animate(iterated_boards, parameter_values)
