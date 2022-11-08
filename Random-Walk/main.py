@@ -9,9 +9,9 @@ print("\nStarting main...\n")
 with open('Resources/parameters.json') as json_file:
     runs = json.load(json_file)
 
-for i in range(len(runs)):
+for run in range(len(runs)):
 
-    parameters = runs[f"run{i}"]
+    parameters = runs[f"run{run}"]
     parameter_values = list(parameters.values())
 
     # Calculating boards
