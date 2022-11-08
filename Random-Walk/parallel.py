@@ -1,15 +1,14 @@
 import numpy as np 
-import matplotlib.pyplot as plt
-from matplotlib.animation import FuncAnimation
+import pandas as pd
 import random
 import time
 
 start = time.time()
 
 n_walkers = 100
-n_steps = 1000
-n_iterations = 1
-n_matrix = 10
+n_steps = 800
+n_iterations = 100
+n_matrix = 50
 
 frame_list = np.zeros((n_steps,n_matrix,n_matrix),dtype=int)
 
@@ -24,25 +23,24 @@ dirs = np.array([
 def move(vec): 
    return (vec + random.choice(dirs))%n_matrix
 
-for k in range(n_iterations):
-   walkers = np.array([[5,5]for i in range(n_walkers)],dtype=int)
+for i in range(n_iterations):
+   walkers = np.array([[5,5]for j in range(n_walkers)],dtype=int)
    for k in range(n_steps):
       walkers_next = np.array(list(map(move, walkers)),dtype=int)
       # check if there are recurrences
       for j1 in range(len(walkers)):
+         walkerj1 = walkers_next[j1]
          for j2 in range(j1+1, len(walkers)):
-            if np.equal(walkers_next[j1],walkers_next[j2]).all():
+            if np.equal(walkerj1,walkers_next[j2]).all():
                walkers_next[j2] = walkers[j2]
-
+         frame_list[k,walkerj1[0],walkerj1[1]] +=1
       walkers = walkers_next
-      for walker in walkers:
-         frame_list[k,walker[0],walker[1]] +=1
-
-      #print(frame_list[k])
-      #print()
-
+   print(i,time.time()-start)
 
 print(time.time()-start)
+
+dataframe = pd.DataFrame(list(frame_list.reshape((n_steps*n_matrix,n_matrix))))
+dataframe.to_csv(f'Resources/Data/parallelRW2D.csv')
       
 
 

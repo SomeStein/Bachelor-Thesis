@@ -1,9 +1,9 @@
 {
-   "name": "",
-   "board_size": 50,
-   "n_steps": 800,
-   "n_walkers": 100,
-   "n_iter": 10000,
-   "anim_speed": 2,
+   "name": "initial_pos_testing2",
+   "board_size": 60,
+   "n_steps": 300,
+   "n_walkers": 400,
+   "n_iter": 1000,
+   "anim_speed": 1,
    "size_exclusion": "with"
 }

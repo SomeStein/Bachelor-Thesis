@@ -9,7 +9,7 @@ import math
 class Walker:
     def __init__(self, x, y, bs):
 
-        self.pos = np.array([x, y])
+        self.pos = np.array([x, y],dtype=int)
         self.board_size = bs
 
         # step choices
@@ -18,7 +18,7 @@ class Walker:
             [-1, 0],
             [0, 1],
             [0, -1]
-        ])
+        ],dtype= int)
 
         self.stay_chance = 1/len(self.dirs)
 
@@ -40,7 +40,7 @@ class Walker:
 
 
 # CALCULATION
-def calc_iterated_boards(params):
+def calc_iterated_boards(params,initial_pos = 0):
 
     [name,
      board_size,
@@ -51,42 +51,50 @@ def calc_iterated_boards(params):
      size_exclusion,
      ] = params
 
-    zero_frame = np.zeros((board_size, board_size))
+    if not initial_pos:
+        initial_pos = [[math.floor(board_size/2), math.floor(board_size/2)] for j in range(n_walkers)]
 
+    
     # INITIALIZING ARRAYS
     start = time.time()
     last_time = start
     frames = []
     walkers = []
     added_frames = []
-    initFrame = zero_frame.copy()
+    zero_frame = np.zeros((board_size, board_size),dtype=int)
 
     for i in range(n_iter):
         frames.append(zero_frame.copy())
         walkers.append([])
         for j in range(n_walkers):
-            walkers[i].append(
-                Walker(math.floor(board_size/2), math.floor(board_size/2), board_size))
-            frames[i][math.floor(board_size/2)][math.floor(board_size/2)] += 1
+            walker = Walker(initial_pos[j][0], initial_pos[j][1], board_size)
+            walkers[i].append(walker)
+            frames[i][initial_pos[j][0]][initial_pos[j][1]] += 1
+
+        #progress bar
         if (time.time()-last_time > 0.5 or i == n_iter-1):
             last_time = time.time()
             printProgressBar(i, n_iter-1, start, length=30,
                              prefix="Initializing arrays ")
-    print("Starting Iteration Loop", end="\r")
+    
+
 
     # MAIN LOOP
+    print("Starting Iteration Loop", end="\r")
     start = time.time()
     last_time = start
-    frames = np.array(frames)
+    frames = np.array(frames,dtype=int)
     for k in range(n_steps):
         added_frames.append(sum(frames))
         for i in range(n_iter):
             r.shuffle(walkers[i])
             for j in range(n_walkers):
                 walkers[i][j].move(frames[i], size_exclusion)
+
+        #progress bar
         if (time.time()-last_time > 0.5 or i == n_iter-1):
             last_time = time.time()
             printProgressBar(k, n_steps-1, start, length=30,
                              prefix="Calculating iterations ")
 
-    return np.array(added_frames)
+    return np.array(added_frames,dtype=int)
