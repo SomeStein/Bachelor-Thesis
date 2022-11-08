@@ -23,9 +23,9 @@ def animate(iterated_boards, params):
         fig.clear()
         ax = plt.axes(projection ='3d')
         ax.set_title(f'2D Random Walk {size_exclusion} SE\n{n_walkers} walkers, {n_iter} iterations, {n_steps} steps')
-        z = iterated_boards[i*anim_speed].clip(0,n_walkers/(board_size*board_size)*10)
+        z = iterated_boards[i*anim_speed].clip(0,n_walkers/(board_size*board_size)*100)
         ax.plot_surface(x, y, z,vmin = 0, vmax=n_walkers/(board_size*board_size)*5, cmap=cm.coolwarm,)
-        ax.set_zlim(0,n_walkers/(board_size*board_size)*5)
+        ax.set_zlim(0,1.75)
         
 
     # Animation
