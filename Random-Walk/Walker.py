@@ -38,6 +38,7 @@ class Walker:
             frame[self.pos[0],self.pos[1]] += 1
 
 
+
 # CALCULATION
 def calc_iterated_boards(params):
 

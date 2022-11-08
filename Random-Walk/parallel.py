@@ -1,53 +1,48 @@
-import numpy as np
+import numpy as np 
+import matplotlib.pyplot as plt
+from matplotlib.animation import FuncAnimation
+import random
 import time
-import Walker
+
+start = time.time()
+
+n_walkers = 100
+n_steps = 1000
+n_iterations = 1
+n_matrix = 10
+
+frame_list = np.zeros((n_steps,n_matrix,n_matrix),dtype=int)
+
+dirs = np.array([
+    [1, 0],
+    [-1, 0],
+    [0, 1],
+    [0, -1],
+    [0,0]
+],dtype=int)
+
+def move(vec): 
+   return (vec + random.choice(dirs))%n_matrix
+
+for k in range(n_iterations):
+   walkers = np.array([[5,5]for i in range(n_walkers)],dtype=int)
+   for k in range(n_steps):
+      walkers_next = np.array(list(map(move, walkers)),dtype=int)
+      # check if there are recurrences
+      for j1 in range(len(walkers)):
+         for j2 in range(j1+1, len(walkers)):
+            if np.equal(walkers_next[j1],walkers_next[j2]).all():
+               walkers_next[j2] = walkers[j2]
+
+      walkers = walkers_next
+      for walker in walkers:
+         frame_list[k,walker[0],walker[1]] +=1
+
+      #print(frame_list[k])
+      #print()
 
 
-def parallel(params):
-    [name,
-     board_size,
-     n_steps,
-     n_walkers,
-     n_iter,
-     anim_speed,
-     size_exclusion,
-     ] = params
+print(time.time()-start)
+      
 
-    zero_frame = np.zeros((board_size, board_size))
 
-    # INITIALIZING ARRAYS
-    start = time.time()
-    last_time = start
-    frames = []
-    walkers = []
-    added_frames = []
-    initFrame = zero_frame.copy()
-
-    for i in range(n_iter):
-        frames.append(zero_frame.copy())
-        walkers.append([])
-        for j in range(n_walkers):
-            walkers[i].append(
-                Walker(math.floor(board_size/2), math.floor(board_size/2), board_size))
-            frames[i][math.floor(board_size/2)][math.floor(board_size/2)] += 1
-        if (time.time()-last_time > 0.5 or i == n_iter-1):
-            last_time = time.time()
-            printProgressBar(i, n_iter-1, start, length=30,
-                             prefix="Initializing arrays ")
-    print("Starting Iteration Loop",end="\r")
-
-    # MAIN LOOP
-    start = time.time()
-    last_time = start
-    for k in range(n_steps):
-        added_frames.append(sum(frames))
-        for i in range(n_iter):
-            r.shuffle(walkers[i])
-            for j in range(n_walkers):
-                walkers[i][j].move(frames[i], size_exclusion)
-        if (time.time()-last_time > 0.5 or i == n_iter-1):
-            last_time = time.time()
-            printProgressBar(k, n_steps-1, start, length=30,
-                             prefix="Calculating iterations ")
-
-    return added_frames
