@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.1.29)  3 NOV 2022 06:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.1.29)  9 DEC 2022 01:46
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"/Users/aaronpumm/Desktop/VS-Code/Bachelor-Thesis/Thesis Latex/thesis.tex"
-(/Users/aaronpumm/Desktop/VS-Code/Bachelor-Thesis/Thesis Latex/thesis.tex
+**"/Users/aaronpumm/ucloud/Bachelor Thesis Random Walk /BA-working-dir/Thesis Latex/thesis.tex"
+(/Users/aaronpumm/ucloud/Bachelor Thesis Random Walk /BA-working-dir/Thesis Latex/thesis.tex
 LaTeX2e <2020-02-02> patch level 5
 L3 programming layer <2020-03-06> (/usr/local/texlive/2020/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2019/12/20 v1.4l Standard LaTeX document class
@@ -89,8 +89,10 @@ File: microtype.cfg 2019/11/18 v2.7d microtype main configuration file (RS)
 Package: babel 2020/03/22 3.42 The Babel package
  (/usr/local/texlive/2020/texmf-dist/tex/generic/babel/switch.def
 File: switch.def 2020/03/22 3.42 Babel switching mechanism
-) (/usr/local/texlive/2020/texmf-dist/tex/generic/babel-english/english.ldf
-Language: english 2017/06/06 v3.3r English support from the babel system
+) (/usr/local/texlive/2020/texmf-dist/tex/generic/babel-german/ngerman.ldf
+Language: ngerman 2018/12/08 v2.11 German support for babel (post-1996 orthography)
+ (/usr/local/texlive/2020/texmf-dist/tex/generic/babel-german/ngermanb.ldf
+Language: ngermanb 2018/12/08 v2.11 German support for babel (post-1996 orthography)
  (/usr/local/texlive/2020/texmf-dist/tex/generic/babel/babel.def
 File: babel.def 2020/03/22 3.42 Babel common definitions
 \babel@savecnt=\count177
@@ -99,13 +101,8 @@ File: babel.def 2020/03/22 3.42 Babel common definitions
 \bbl@readstream=\read2
 \bbl@dirlevel=\count178
 )
-Package babel Info: \l@canadian = using hyphenrules for english
-(babel)             (\language0) on input line 102.
-Package babel Info: \l@australian = using hyphenrules for ukenglish
-(babel)             (\language21) on input line 105.
-Package babel Info: \l@newzealand = using hyphenrules for ukenglish
-(babel)             (\language21) on input line 108.
-)) (/usr/local/texlive/2020/texmf-dist/tex/latex/csquotes/csquotes.sty
+Package babel Info: Making " an active character on input line 121.
+))) (/usr/local/texlive/2020/texmf-dist/tex/latex/csquotes/csquotes.sty
 Package: csquotes 2019-12-06 v5.2j context-sensitive quotations (JAW)
  (/usr/local/texlive/2020/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2019/09/21 v2.5h e-TeX tools for LaTeX (JAW)
@@ -571,12 +568,12 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
-Package csquotes Info: Redefining alias 'default' -> 'english'.
+Package csquotes Info: Redefining alias 'default' -> 'ngerman'.
  (/usr/local/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
 File: l3backend-pdfmode.def 2020-03-12 L3 backend support: PDF mode
 \l__kernel_color_stack_int=\count401
 \l__pdf_internal_box=\box49
-) (/Users/aaronpumm/Desktop/VS-Code/Bachelor-Thesis/Thesis Latex/thesis.aux)
+) (/Users/aaronpumm/ucloud/Bachelor Thesis Random Walk /BA-working-dir/Thesis Latex/thesis.aux)
 \openout1 = `thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 106.
@@ -613,11 +610,20 @@ Package microtype Info: No adjustment of character kerning.
  (/usr/local/texlive/2020/texmf-dist/tex/latex/microtype/mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (RS)
 )
-Package biblatex Info: Trying to load language 'english'...
-Package biblatex Info: ... file 'english.lbx' found.
- (/usr/local/texlive/2020/texmf-dist/tex/latex/biblatex/lbx/english.lbx
-File: english.lbx 2019/12/01 v3.14 biblatex localization (PK/MW)
+Package biblatex Info: Trying to load language 'ngerman'...
+Package biblatex Info: ... file 'ngerman.lbx' found.
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/biblatex/lbx/ngerman.lbx
+File: ngerman.lbx 2019/12/01 v3.14 biblatex localization (PK/MW)
+Package biblatex Info: Trying to load language 'german'...
+Package biblatex Info: ... file 'german.lbx' found.
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/biblatex/lbx/german.lbx
+File: german.lbx 2019/12/01 v3.14 biblatex localization (PK/MW)
 )
+Package biblatex Info: Trying to load language 'german'...
+Package biblatex Info: ... file 'german.lbx' found.
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/biblatex/lbx/german.lbx
+File: german.lbx 2019/12/01 v3.14 biblatex localization (PK/MW)
+))
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
@@ -625,7 +631,7 @@ Package biblatex Info: Automatic encoding selection.
 
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'thesis.bbl' found.
- (/Users/aaronpumm/Desktop/VS-Code/Bachelor-Thesis/Thesis Latex/thesis.bbl)
+ (/Users/aaronpumm/ucloud/Bachelor Thesis Random Walk /BA-working-dir/Thesis Latex/thesis.bbl)
 Package biblatex Info: Reference section=0 on input line 106.
 Package biblatex Info: Reference segment=0 on input line 106.
  (/usr/local/texlive/2020/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -661,13 +667,13 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 106.
 LaTeX Info: Redefining \pageref on input line 106.
 LaTeX Info: Redefining \nameref on input line 106.
- (/Users/aaronpumm/Desktop/VS-Code/Bachelor-Thesis/Thesis Latex/thesis.out) (/Users/aaronpumm/Desktop/VS-Code/Bachelor-Thesis/Thesis Latex/thesis.out)
+ (/Users/aaronpumm/ucloud/Bachelor Thesis Random Walk /BA-working-dir/Thesis Latex/thesis.out) (/Users/aaronpumm/ucloud/Bachelor Thesis Random Walk /BA-working-dir/Thesis Latex/thesis.out)
 \@outlinefile=\write4
 \openout4 = `thesis.out'.
 
 Package hyperref Info: Option `pageanchor' set `false' on input line 109.
  (./content/titlepage.tex
-<Uni_Logo_2016_SW.jpg, id=72, 481.8pt x 240.9pt>
+<Uni_Logo_2016_SW.jpg, id=28, 481.8pt x 240.9pt>
 File: Uni_Logo_2016_SW.jpg Graphic file (type jpg)
 <use Uni_Logo_2016_SW.jpg>
 Package pdftex.def Info: Uni_Logo_2016_SW.jpg  used on input line 5.
@@ -715,25 +721,17 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 ) [1
 
-{/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map} </Users/aaronpumm/Desktop/VS-Code/Bachelor-Thesis/Thesis Latex/Uni_Logo_2016_SW.jpg>] [2]) (./content/abstract.tex) [1] (/Users/aaronpumm/Desktop/VS-Code/Bachelor-Thesis/Thesis Latex/thesis.toc)
+{/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map} </Users/aaronpumm/ucloud/Bachelor Thesis Random Walk /BA-working-dir/Thesis Latex/Uni_Logo_2016_SW.jpg>] [2]) (./content/abstract.tex) [1] (/Users/aaronpumm/ucloud/Bachelor Thesis Random Walk /BA-working-dir/Thesis Latex/thesis.toc)
 \tf@toc=\write5
 \openout5 = `thesis.toc'.
 
  [2]
 Package hyperref Info: Option `pageanchor' set `true' on input line 125.
- (./content/abschnitt.tex
-Package hyperref Info: bookmark level for unknown thm defaults to 0 on input line 5.
- [1]
-<content/figures/Pythagoras.PNG, id=131, 843.15pt x 887.56593pt>
-File: content/figures/Pythagoras.PNG Graphic file (type png)
-<use content/figures/Pythagoras.PNG>
-Package pdftex.def Info: content/figures/Pythagoras.PNG  used on input line 71.
-(pdftex.def)             Requested size: 142.26378pt x 149.74658pt.
- [2 </Users/aaronpumm/Desktop/VS-Code/Bachelor-Thesis/Thesis Latex/content/figures/Pythagoras.PNG>] [3]) (./content/intro.tex)
+ (./content/content.tex)
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/lmr/m/sc/10'.
 (microtype)             Ignoring protrusion settings for this character.
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 152.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 134.
  (/usr/local/texlive/2020/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
@@ -741,31 +739,32 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 153.
- [4]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 153.
- (/Users/aaronpumm/Desktop/VS-Code/Bachelor-Thesis/Thesis Latex/thesis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 153.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 153.
+ [1]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 135.
+ [2]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 135.
+ (/Users/aaronpumm/ucloud/Bachelor Thesis Random Walk /BA-working-dir/Thesis Latex/thesis.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 135.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 135.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 9ADFFEADF9E4AB76673BDD6E582B26A4;930.
+(rerunfilecheck)             Checksum: 794E5BB6FDF9D0241C8F3A66D2A4D9BD;281.
 Package logreq Info: Writing requests to 'thesis.run.xml'.
 \openout1 = `thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 17079 strings out of 480608
- 293454 string characters out of 5903630
- 986891 words of memory out of 5000000
- 32547 multiletter control sequences out of 15000+600000
- 597084 words of font info for 96 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 39i,16n,45p,1215b,1734s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}</usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmss10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmss12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmss17.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on "/Users/aaronpumm/Desktop/VS-Code/Bachelor-Thesis/Thesis Latex/thesis.pdf" (8 pages, 539301 bytes).
+ 17047 strings out of 480608
+ 293321 string characters out of 5903630
+ 1001247 words of memory out of 5000000
+ 32562 multiletter control sequences out of 15000+600000
+ 595792 words of font info for 81 fonts, out of 8000000 for 9000
+ 1143 hyphenation exceptions out of 8191
+ 42i,6n,45p,1234b,2193s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}</usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmss10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmss12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmss17.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
+Output written on "/Users/aaronpumm/ucloud/Bachelor Thesis Random Walk /BA-working-dir/Thesis Latex/thesis.pdf" (6 pages, 457953 bytes).
 PDF statistics:
- 228 PDF objects out of 1000 (max. 8388607)
- 197 compressed objects within 2 object streams
- 35 named destinations out of 1000 (max. 500000)
- 21139 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 113 PDF objects out of 1000 (max. 8388607)
+ 93 compressed objects within 1 object stream
+ 14 named destinations out of 1000 (max. 500000)
+ 21046 words of extra memory for PDF output out of 24883 (max. 10000000)
 

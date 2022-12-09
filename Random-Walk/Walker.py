@@ -54,6 +54,7 @@ def calc_iterated_boards(params,initial_pos = 0):
     if not initial_pos:
         initial_pos = [[math.floor(board_size/2), math.floor(board_size/2)] for j in range(n_walkers)]
 
+    n_walkers = len(initial_pos)
     
     # INITIALIZING ARRAYS
     start = time.time()

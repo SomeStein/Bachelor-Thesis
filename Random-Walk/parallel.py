@@ -40,7 +40,7 @@ for i in range(n_iterations):
 print(time.time()-start)
 
 dataframe = pd.DataFrame(list(frame_list.reshape((n_steps*n_matrix,n_matrix))))
-dataframe.to_csv(f'Resources/Data/parallelRW2D.csv')
+dataframe.to_csv(f'Resources/Data/parallelRW2Dtest.csv')
       
 
 
