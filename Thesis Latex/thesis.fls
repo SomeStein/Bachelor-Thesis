@@ -1,9 +1,9 @@
-PWD /Users/aaronpumm/ucloud/Bachelor Thesis Random Walk /BA-working-dir/Thesis Latex
+PWD /Users/aaronpumm/Desktop/VS-Code/BA-working-dir/Thesis Latex
 INPUT /usr/local/texlive/2020/texmf.cnf
 INPUT /usr/local/texlive/2020/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2020/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT /Users/aaronpumm/ucloud/Bachelor Thesis Random Walk /BA-working-dir/Thesis Latex/thesis.tex
-OUTPUT /Users/aaronpumm/ucloud/Bachelor Thesis Random Walk /BA-working-dir/Thesis Latex/thesis.log
+INPUT /Users/aaronpumm/Desktop/VS-Code/BA-working-dir/Thesis Latex/thesis.tex
+OUTPUT /Users/aaronpumm/Desktop/VS-Code/BA-working-dir/Thesis Latex/thesis.log
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/base/size10.clo
@@ -163,9 +163,9 @@ INPUT /usr/local/texlive/2020/texmf-dist/tex/generic/uniquecounter/uniquecounter
 INPUT /usr/local/texlive/2020/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
-INPUT /Users/aaronpumm/ucloud/Bachelor Thesis Random Walk /BA-working-dir/Thesis Latex/thesis.aux
-INPUT /Users/aaronpumm/ucloud/Bachelor Thesis Random Walk /BA-working-dir/Thesis Latex/thesis.aux
-OUTPUT /Users/aaronpumm/ucloud/Bachelor Thesis Random Walk /BA-working-dir/Thesis Latex/thesis.aux
+INPUT /Users/aaronpumm/Desktop/VS-Code/BA-working-dir/Thesis Latex/thesis.aux
+INPUT /Users/aaronpumm/Desktop/VS-Code/BA-working-dir/Thesis Latex/thesis.aux
+OUTPUT /Users/aaronpumm/Desktop/VS-Code/BA-working-dir/Thesis Latex/thesis.aux
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/lm/t1lmr.fd
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/lm/t1lmr.fd
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/lm/ec-lmr10.tfm
@@ -177,10 +177,10 @@ INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/biblatex/lbx/german.lbx
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/biblatex/lbx/german.lbx
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/biblatex/lbx/german.lbx
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/biblatex/lbx/german.lbx
-OUTPUT /Users/aaronpumm/ucloud/Bachelor Thesis Random Walk /BA-working-dir/Thesis Latex/thesis.bcf
-INPUT /Users/aaronpumm/ucloud/Bachelor Thesis Random Walk /BA-working-dir/Thesis Latex/thesis.bbl
-INPUT /Users/aaronpumm/ucloud/Bachelor Thesis Random Walk /BA-working-dir/Thesis Latex/thesis.bbl
-INPUT /Users/aaronpumm/ucloud/Bachelor Thesis Random Walk /BA-working-dir/Thesis Latex/thesis.bbl
+OUTPUT /Users/aaronpumm/Desktop/VS-Code/BA-working-dir/Thesis Latex/thesis.bcf
+INPUT /Users/aaronpumm/Desktop/VS-Code/BA-working-dir/Thesis Latex/thesis.bbl
+INPUT /Users/aaronpumm/Desktop/VS-Code/BA-working-dir/Thesis Latex/thesis.bbl
+INPUT /Users/aaronpumm/Desktop/VS-Code/BA-working-dir/Thesis Latex/thesis.bbl
 INPUT /usr/local/texlive/2020/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/local/texlive/2020/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
@@ -193,19 +193,19 @@ INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/refcount/refcount.sty
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/refcount/refcount.sty
 INPUT /usr/local/texlive/2020/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 INPUT /usr/local/texlive/2020/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
-INPUT /Users/aaronpumm/ucloud/Bachelor Thesis Random Walk /BA-working-dir/Thesis Latex/thesis.out
-INPUT /Users/aaronpumm/ucloud/Bachelor Thesis Random Walk /BA-working-dir/Thesis Latex/thesis.out
-INPUT /Users/aaronpumm/ucloud/Bachelor Thesis Random Walk /BA-working-dir/Thesis Latex/thesis.out
-INPUT /Users/aaronpumm/ucloud/Bachelor Thesis Random Walk /BA-working-dir/Thesis Latex/thesis.out
-OUTPUT /Users/aaronpumm/ucloud/Bachelor Thesis Random Walk /BA-working-dir/Thesis Latex/thesis.pdf
-INPUT /Users/aaronpumm/ucloud/Bachelor Thesis Random Walk /BA-working-dir/Thesis Latex/thesis.out
-INPUT /Users/aaronpumm/ucloud/Bachelor Thesis Random Walk /BA-working-dir/Thesis Latex/thesis.out
-OUTPUT /Users/aaronpumm/ucloud/Bachelor Thesis Random Walk /BA-working-dir/Thesis Latex/thesis.out
+INPUT /Users/aaronpumm/Desktop/VS-Code/BA-working-dir/Thesis Latex/thesis.out
+INPUT /Users/aaronpumm/Desktop/VS-Code/BA-working-dir/Thesis Latex/thesis.out
+INPUT /Users/aaronpumm/Desktop/VS-Code/BA-working-dir/Thesis Latex/thesis.out
+INPUT /Users/aaronpumm/Desktop/VS-Code/BA-working-dir/Thesis Latex/thesis.out
+OUTPUT /Users/aaronpumm/Desktop/VS-Code/BA-working-dir/Thesis Latex/thesis.pdf
+INPUT /Users/aaronpumm/Desktop/VS-Code/BA-working-dir/Thesis Latex/thesis.out
+INPUT /Users/aaronpumm/Desktop/VS-Code/BA-working-dir/Thesis Latex/thesis.out
+OUTPUT /Users/aaronpumm/Desktop/VS-Code/BA-working-dir/Thesis Latex/thesis.out
 INPUT ./content/titlepage.tex
 INPUT ./content/titlepage.tex
-INPUT /Users/aaronpumm/ucloud/Bachelor Thesis Random Walk /BA-working-dir/Thesis Latex/Uni_Logo_2016_SW.jpg
-INPUT /Users/aaronpumm/ucloud/Bachelor Thesis Random Walk /BA-working-dir/Thesis Latex/Uni_Logo_2016_SW.jpg
-INPUT /Users/aaronpumm/ucloud/Bachelor Thesis Random Walk /BA-working-dir/Thesis Latex/Uni_Logo_2016_SW.jpg
+INPUT /Users/aaronpumm/Desktop/VS-Code/BA-working-dir/Thesis Latex/Uni_Logo_2016_SW.jpg
+INPUT /Users/aaronpumm/Desktop/VS-Code/BA-working-dir/Thesis Latex/Uni_Logo_2016_SW.jpg
+INPUT /Users/aaronpumm/Desktop/VS-Code/BA-working-dir/Thesis Latex/Uni_Logo_2016_SW.jpg
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/lm/ec-lmr17.tfm
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/lm/ec-lmbx12.tfm
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/lm/t1lmss.fd
@@ -254,31 +254,28 @@ INPUT /usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 INPUT ./content/abstract.tex
 INPUT ./content/abstract.tex
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/lm/ec-lmbx12.tfm
-INPUT /Users/aaronpumm/ucloud/Bachelor Thesis Random Walk /BA-working-dir/Thesis Latex/thesis.toc
-INPUT /Users/aaronpumm/ucloud/Bachelor Thesis Random Walk /BA-working-dir/Thesis Latex/thesis.toc
+INPUT /Users/aaronpumm/Desktop/VS-Code/BA-working-dir/Thesis Latex/thesis.toc
+INPUT /Users/aaronpumm/Desktop/VS-Code/BA-working-dir/Thesis Latex/thesis.toc
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/lm/ec-lmbx10.tfm
-OUTPUT /Users/aaronpumm/ucloud/Bachelor Thesis Random Walk /BA-working-dir/Thesis Latex/thesis.toc
+OUTPUT /Users/aaronpumm/Desktop/VS-Code/BA-working-dir/Thesis Latex/thesis.toc
 INPUT ./content/content.tex
 INPUT ./content/content.tex
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/lm/ec-lmbx12.tfm
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/lm/ec-lmri10.tfm
-INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/lm/ec-lmcsc10.tfm
-INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/lm/t1lmtt.fd
-INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/lm/t1lmtt.fd
-INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/lm/ec-lmtt10.tfm
-INPUT /Users/aaronpumm/ucloud/Bachelor Thesis Random Walk /BA-working-dir/Thesis Latex/thesis.aux
-INPUT /Users/aaronpumm/ucloud/Bachelor Thesis Random Walk /BA-working-dir/Thesis Latex/thesis.out
-INPUT /Users/aaronpumm/ucloud/Bachelor Thesis Random Walk /BA-working-dir/Thesis Latex/thesis.out
-INPUT /Users/aaronpumm/ucloud/Bachelor Thesis Random Walk /BA-working-dir/Thesis Latex/thesis.run.xml
-OUTPUT /Users/aaronpumm/ucloud/Bachelor Thesis Random Walk /BA-working-dir/Thesis Latex/thesis.run.xml
+INPUT /Users/aaronpumm/Desktop/VS-Code/BA-working-dir/Thesis Latex/thesis.aux
+INPUT /Users/aaronpumm/Desktop/VS-Code/BA-working-dir/Thesis Latex/thesis.out
+INPUT /Users/aaronpumm/Desktop/VS-Code/BA-working-dir/Thesis Latex/thesis.out
+INPUT /Users/aaronpumm/Desktop/VS-Code/BA-working-dir/Thesis Latex/thesis.run.xml
+OUTPUT /Users/aaronpumm/Desktop/VS-Code/BA-working-dir/Thesis Latex/thesis.run.xml
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmbx10.pfb
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmbx12.pfb
-INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmmi10.pfb
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmmi7.pfb
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmr10.pfb
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmri10.pfb
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmss10.pfb
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmss12.pfb
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmss17.pfb
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb
-INPUT /usr/local/texlive/2020/texmf-dist/fonts/type1/public/lm/lmtt10.pfb

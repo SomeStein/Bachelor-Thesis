@@ -2182,7 +2182,7 @@
     <bcf:datasource type="file" datatype="bibtex">./content/references.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1">kafka2015prozess</bcf:citekey>
+    <bcf:citekey order="1">kirchner2003friction</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">

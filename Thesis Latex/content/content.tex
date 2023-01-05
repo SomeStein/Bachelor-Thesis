@@ -8,36 +8,54 @@ This wide field tries to model behaviour of often multiple or thousands of entit
 ruleset (physics, updating, choices, size exclusion, etc.). After models are described they can be used to simulate, prognose, evaluate or prevent undesired reallife scenarios such as crowding, clugging, traffic jams etc. 
 These models can sometimes be very computational demanding if the number of simulated agents or the resolution is surpasing some threshold. In some cases floating point precision is not neccesary to analyse the overall behaviour of a given system.
 This is the reason why some models are based on a Cellular Automata approach.
-This way the number of operations needed is redused while also keeping a high degree of realism in the results of the simulation. 
-We want to discuss the applications of the random walk in such models as well as the differantiation between micro- and macroscopic modeling and how the preventation of overlapping agents can change the overall dynamics of such system. 
+This way the number of operations needed is redused while also keeping a high degree of realism in the results of the simulation.
+Cellular Automata are lattice-based models that are discrete in space and time. 
+In this thesis we use a stochastic CA called Random Walk. Stochastic in the sense that the individual location $x_{i}$ of an agent $i$ at time $t$ is non deterministic and thus a stochastic process.
+ 
+We differ between multiple scales: microscopic models give some underlying movement of bodies described by a ruleset given in a discrete time and space scale. It models the actions of individual agents in a grid. Later we apply multiple rulesets to differantiate between longterm and shortterm behaviour.
+macroscopic models are often based in a continuous space and try to model flows and potentials of whole scoops of particles. This is a nice way to visualize, predict and optimize trends and timings of a given system with less computational demand.
+We want to discuss the applications of the random walk in such models as well as the differantiation between micro- and macroscopic modeling and how the strict prohibition of overlapping/intersecting agents can change the overall dynamics of such a system. 
 
-bullet points: 
-pedestrian dynamics history
-scales
-models 
-simulations
-difficulties
-current models  
-topic of this bachelor thesis investigation in improvements of the model 
-
+\newpage
 \section{Random Walk}
-The Random Walk is a process often defined within 
+The Random Walk is a discrete stochastic process. Here it is defined in a 2D lattice space consisting of cells. Every cell can be occupied by an agent. This is denoted by an encrease of the cells value of 1. 
+Later in the works of the macroscopic modelling the values are often determined by a monte-carlo-method and get normalized. 
+Sometimes in research this corresponding variable is mentioned as population-density.
+\subsection{Rulsesets of the Random Walk}
+As mentioned earlier every model has a underlying rulset. There are multiple versions for the Random Walk and its a non-trivial task to choose the right one for the specified purpose. 
+Since we want to simulate the movement of humans at the top level of this work the ruleset has to be grounded in physical accuracy. 
+At its core the Random Walks movement is defined by the neighboring cells a given agent can step into and the probability of which this cell is chosen. 
+In the most used combination every agent can step onto a adjecent cell (not diagonally) with equal probabilities.
+This alone leads to an undesired effect that all the cells can only be occupied exactly every second timestep an checkerboard pattern emerges and totally breaks any attempt of smoothing on a macroscopic scale. 
+This is a well known effect in probability theory as well as in the field of stochastic processes.
+So to prevent this the agent is also allowed to stay at its location. 
+In this thesis we discuss multiple versions that build on top of that core ruleset. 
 
+
+\newpage
 \section{Size Exclusion}
 The main subject of this bachelor thesis is the comparison of the macroscopic behavior, when agents are allowed to overlap or not.
 In the research of pedestrian dynamics this parameter is called size exclusion. In this chapter we want to define, and analyse this parameter and its concepts in depth. 
-\subsection*{Sequentially updated agents}
-\cite[]{kafka2015prozess}
+\subsection{Sequentially updated agents}
+\subsection{Scrambled-Sequentially updated agents}
+\subsection{Parallel updated agents}
 
-
-
+\newpage
 \section{Heat Equation}
+The Heat equation is a partial differential equation which naturally appears in the work of pedestrian dynamics as often models have a diffusive component to it.
+Here we want to discuss the heat equation and its solutions as limits of our microscopic models with different parameters.
 
-
+\newpage
 \section{Simulations}
+Pedestrian dynamics is a field of applied mathematics. The research can benefit of and depends on real life data and actual error afflicted simulations.
+Some results of the previous discussed models shall be analyzed and compared here. 
 
 
+\newpage
 \section{Conclusion}
+Until this point no conclusion can be made.
+
+\cite*{kirchner2003friction}
 
 
 

@@ -15,7 +15,7 @@ for run in range(len(runs)):
     parameter_values = list(parameters.values())
 
     # Calculating boards
-    iterated_boards = calc_iterated_boards(parameter_values,[np.array([20+i,20+j],dtype=int)%parameters["board_size"] for i in range(10) for j in range(10)])
+    iterated_boards = calc_iterated_boards(parameter_values)
 
     # Saving iterated boards as CSV
     export_as_csv(iterated_boards, parameter_values)

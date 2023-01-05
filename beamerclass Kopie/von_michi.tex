@@ -1,0 +1,180 @@
+\documentclass[xcolor=dvipsnames, aspectratio=169]{beamer} 
+
+
+\mode<presentation> {
+	%\usetheme{Singapore}
+	%\usetheme{CambridgeUS}
+	\usecolortheme{dolphin}
+	\definecolor{anti-flashwhite}{rgb}{0.95, 0.95, 0.96}
+	\definecolor{lightgray}{rgb}{0.83, 0.83, 0.83}
+	\setbeamercolor{block title}{use=structure,fg=black,bg=RoyalPurple!60}
+	\setbeamercolor{block body}{use=structure,fg=black,bg=RoyalPurple!10}
+	\setbeamercolor{block title example}{fg=black,bg=RoyalPurple!20}
+	\setbeamercolor{block body example}{fg=black,bg=RoyalPurple!5}
+	\definecolor{darkred}{rgb}{0.8,0,0}
+	\setbeamercolor*{item}{fg=DarkOrchid}
+}
+
+%\lstdefinestyle{mystyle}{
+%	basicstyle=\tiny,
+%	%backgroundcolor=\color{backcolour},   
+%	%commentstyle=\color{codegreen},
+%	keywordstyle=\color{blue},
+%	%numberstyle=\tiny\color{codegray},
+%	%stringstyle=\color{codepurple},
+%	breakatwhitespace=false,         
+%	breaklines=true,                 
+%	captionpos=b,                    
+%	keepspaces=true,                 
+%	numbers=left,                    
+%	numbersep=5pt,                  
+%	showspaces=false,                
+%	showstringspaces=false,
+%	showtabs=false,                  
+%	tabsize=2,
+%	%aboveskip=2em,
+%	%belowskip=2em
+%}
+	
+%Packages
+\usepackage{graphicx}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amsfonts, amssymb}
+\usepackage{paralist}
+\usepackage{mathtools}
+
+\usepackage{lmodern}
+%\usepackage{MnSymbol}
+
+\usepackage{tabularx}
+\usepackage{ragged2e} 
+\usepackage{enumerate}
+\usepackage{bbm}
+\usepackage{bbold}
+\usepackage{pgfplots}
+\usepackage{tikz}
+\usetikzlibrary{fit,calc,positioning,decorations.pathreplacing,matrix}
+\usepackage{calligra}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{caption}
+\usepackage[bottom]{footmisc}
+\usepackage{multimedia}
+\usepackage{csquotes}
+\usepackage[backend=biber, natbib=true, style=numeric]{biblatex}
+\addbibresource{refs.bib}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{transparent}
+%\usepackage{natbib}
+\usepackage{bibentry}
+\usepackage{filecontents}
+%\usepackage[style=verbose,backend=bibtex]{biblatex}
+
+\usepackage{xcolor}
+
+%\usepackage{enumitem}
+
+%MOVIES
+\usepackage{animate}
+\usepackage{media9}
+
+%vertical writing
+\newcommand{\btVFill}{\vskip0pt plus 1filll}
+
+% the copyright
+\usepackage{txfonts}
+
+%brackets
+%\usepackage{amsmath}
+%\usepackage[clean]{svg}
+
+
+
+
+\newtheorem{conjecture}{Conjecture}
+
+
+%TITLE PAGE
+
+\title{A rigorous limit from micro to macro}
+\author{Michael Fischer}
+\institute{University of Vienna}
+%\addtobeamertemplate{title page}{}{joint work with ...} 
+\logo{\includegraphics[scale=0.2]{Uni_Logo_2016.jpg}}%~\includegraphics[scale=0.05]{logo_sfb_blue.jpg}}
+
+
+\date{22.06.2022 \\ \vspace{0.2in} \footnotesize{Joint work with \textit{L. Kanzler} (Paris Sorbonne Université), \textit{C. Schmeiser} (Universität Wien)}}
+
+
+
+\AtBeginSection[]
+{
+	\begin{frame}[t]
+		\frametitle{Table of Contents}
+		\tableofcontents[currentsection]
+	\end{frame}
+}
+
+\makeatletter
+%\setbeamertemplate{footline}
+%{
+%	\leavevmode%
+%	\hbox{%
+%		\begin{beamercolorbox}[wd=.25\paperwidth,ht=2.25ex,dp=1ex,left]{author in head/foot}%
+%			\usebeamerfont{author in head/foot}\hspace*{2em}\insertshortauthor
+%		\end{beamercolorbox}%
+%		\begin{beamercolorbox}[wd=.5\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
+%			\usebeamerfont{title in head/foot} DEA 2019, AGH University of Science and Technology%\insertsection %\insertsubsection
+%		\end{beamercolorbox}%
+%		\begin{beamercolorbox}[wd=.25\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
+%			\usebeamerfont{date in head/foot} September 20, 2019\hspace*{2em}%\insertshortdate{}
+%			%\insertframenumber{} / \inserttotalframenumber\hspace*{2ex}
+%		\end{beamercolorbox}}%
+%		\vskip0pt%
+%	}
+%	\makeatother 
+	
+
+\begin{document}
+%\nocite{*}
+
+\begin{frame}[t]
+	\titlepage
+\end{frame}
+
+\logo{}
+
+%contents
+%\begin{frame}[t]
+%\frametitle{Table of Contents}
+%\tableofcontents % [paussections]
+%\end{frame}
+
+%slides
+
+
+\section{Motivation}
+
+\begin{frame}[t]{Motivation}
+
+\end{frame}
+
+\begin{frame}[t]{Videotrick}
+\begin{center}
+\includegraphics[width=0.6\linewidth]{bacteria_pushing/bacteria-pushing-01.jpeg} 
+\end{center}
+\end{frame}
+
+\begin{frame}[t]{Videotrick}
+\begin{center}
+\animategraphics[autoplay,width=0.6\linewidth]{4}{bacteria_pushing/bacteria-pushing-}{01}{24}
+\end{center}
+\end{frame}
+
+
+
+
+
+\end{document}
