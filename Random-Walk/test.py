@@ -1,47 +1,35 @@
-import numpy as np
+import numpy as np 
+import pandas as pd
+import random 
 import time
 
-SE = "with"
-frame = np.zeros((50,50))
-n = 50000000
+start = time.time()
 
-def check1(SE,frame):
-    if SE == "without" or frame[0,0] == 0:   #winner tuple(self.pos)
-        return
+n_walkers = 30
+n_steps = 1000
+n_iterations = 100
+board_size = 100
 
-def check2(SE,frame):   
-    if frame[0,0] == 0 or SE == "without" :
-        return
+frame_list = np.zeros((n_steps,board_size),dtype=int)
 
-def check3(SE,frame):   
-    if frame[0,0] == 0:
-        return
+def move(pos): 
+   return (pos + random.randint(-1, 1))%board_size
 
-def check4(SE,frame):   
-    return
+for i in range(n_iterations):
+   walkers = np.array([ int(board_size/2) for j in range(n_walkers)],dtype=int)
+   for k in range(n_steps):
+      walkers_next = np.array(list(map(move, walkers)),dtype=int)
+      # check if there are recurrences
+      for j1 in range(len(walkers)):
+         walkerj1 = walkers_next[j1]
+         for j2 in range(j1+1, n_walkers):
+            if walkerj1 == walkers_next[j2]:
+               walkers_next[j2] = walkers[j2]
+         frame_list[k,walkerj1] +=1
+      walkers = walkers_next
+   print(i,time.time()-start)
 
+print(time.time()-start)
 
-start1 = time.time()
-for i in range(n):
-    check1(SE,frame)
-end1 = time.time()
-
-start2 = time.time()
-for i in range(n):
-    check2(SE,frame)
-end2 = time.time()
-
-start3 = time.time()
-for i in range(n):
-    check3(SE,frame)
-end3 = time.time()
-
-start4 = time.time()
-for i in range(n):
-    check4(SE,frame)
-end4 = time.time()
-
-print("check 1 took: ", end1-start1, " seconds")
-print("check 2 took: ", end2-start2, " seconds")
-print("check 3 took: ", end3-start3, " seconds")
-print("check 4 took: ", end4-start4, " seconds")
+dataframe = pd.DataFrame(list(frame_list.reshape((n_steps,board_size))))
+dataframe.to_csv(f'Resources/Data/parallelRW1Dtest.csv')

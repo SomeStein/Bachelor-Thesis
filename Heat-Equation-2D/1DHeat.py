@@ -21,15 +21,15 @@ def FTCS(dt, dy, t_max, y_max, k, T0):
         j = 0
         T[n+1, j] = T[n,j] + s*(T[n,-1] - 2*T[n,j] + T[n,-1])
         for j in range(1, c-1):
-            T[n+1,j] = T[n,j] + s*(T[n,j-1] - 2*T[n,j] + T[n,j+1])  # as before
+            T[n+1,j] = T[n,j] + s*(T[n,j-1] - 2*T[n,j] + T[n,j+1]) 
         j = c-1 
-        T[n+1, j] = T[n,j] + s*(T[n,j-1] - 2*T[n,j] + T[n,j-1])  # note the last term her
+        T[n+1, j] = T[n,j] + s*(T[n,j-1] - 2*T[n,j] + T[n,j-1])  
 
     return y,T,r,s
 
 y,T,r,s = FTCS(dt,dy,t_max,y_max,k,T0)
 
-plot_times = np.arange(0.01,t_max,t_max/100)
+plot_times = np.arange(0.01,t_max,t_max/30)
 for t in plot_times:
     plt.plot(y,T[int(t/dt),:])
 

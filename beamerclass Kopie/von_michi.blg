@@ -1,9 +1,0 @@
-[0] Config.pm:307> INFO - This is Biber 2.17
-[0] Config.pm:310> INFO - Logfile is 'von_michi.blg'
-[76] biber:340> INFO - === Di Jän  3, 2023, 16:45:26
-[91] Biber.pm:418> INFO - Reading 'von_michi.bcf'
-[159] Biber.pm:972> INFO - Found 0 citekeys in bib section 0
-[172] bbl.pm:654> INFO - Writing 'von_michi.bbl' with encoding 'UTF-8'
-[172] bbl.pm:757> INFO - Output to von_michi.bbl
-[172] Biber.pm:130> WARN - The file 'von_michi.bcf' does not contain any citations!
-[172] Biber.pm:132> INFO - WARNINGS: 1
