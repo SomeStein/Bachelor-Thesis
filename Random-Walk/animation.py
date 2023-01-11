@@ -20,12 +20,19 @@ def animate(iterated_boards, params):
 
     # Update Function for Animation
     def update(i):
+    #     fig.clear()
+    #     ax = plt.axes(projection ='3d')
+    #     ax.set_title(f'2D Random Walk {size_exclusion} SE\n{n_walkers} walkers, {n_iter} iterations, {n_steps} steps')
+    #     z = iterated_boards[i*anim_speed].clip(0,n_walkers/(board_size*board_size)*100)
+    #     ax.plot_surface(x, y, z,vmin = 0, vmax=n_walkers/(board_size*board_size)*5, cmap=cm.coolwarm,)
+    #     ax.set_zlim(0,1.75)
+    
         fig.clear()
-        ax = plt.axes(projection ='3d')
-        ax.set_title(f'2D Random Walk {size_exclusion} SE\n{n_walkers} walkers, {n_iter} iterations, {n_steps} steps')
-        z = iterated_boards[i*anim_speed].clip(0,n_walkers/(board_size*board_size)*100)
-        ax.plot_surface(x, y, z,vmin = 0, vmax=n_walkers/(board_size*board_size)*5, cmap=cm.coolwarm,)
-        ax.set_zlim(0,1.75)
+        ax = fig.add_subplot(111)
+        ax.set_title('2D Random Walk')
+        #ax.get_xaxis().set_visible(False)
+        #ax.get_yaxis().set_visible(False)
+        map = ax.matshow(iterated_boards[i*anim_speed, :, :], cmap='gray_r', vmin=0, vmax=n_walkers/(board_size*board_size)*3)
         
 
     # Animation
@@ -37,7 +44,7 @@ def animate(iterated_boards, params):
     )
 
     animation.save(
-        f'Resources/Solves/{name}RW2D{size_exclusion}SE.gif', PillowWriter(fps=24))
+        f'Resources/Solves/{name}RW2D{size_exclusion}SE.gif', PillowWriter(fps=4))
 
     print()
     print("Animation was saved under ",

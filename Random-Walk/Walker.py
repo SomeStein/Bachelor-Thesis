@@ -73,7 +73,7 @@ def calc_iterated_boards(params,initial_pos = 0):
             frames[i][initial_pos[j][0]][initial_pos[j][1]] += 1
 
         #progress bar
-        if (time.time()-last_time > 0.5 or i == n_iter-1):
+        if ((time.time()-last_time > 0.5 or i == n_iter-1) and n_iter != 1 ):
             last_time = time.time()
             printProgressBar(i, n_iter-1, start, length=30,
                              prefix="Initializing arrays ")

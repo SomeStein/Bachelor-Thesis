@@ -1,20 +1,20 @@
 {
    "run0": {
-      "name": "probe",
-      "board_size": 50,
-      "n_steps": 500,
+      "name": "100_Agenten_ohne_SE",
+      "board_size": 25,
+      "n_steps": 200,
       "n_walkers": 100,
-      "n_iter": 100000,
-      "anim_speed": 1,
-      "size_exclusion": "with"
-   },
-   "run1": {
-      "name": "initial_pos_testing3",
-      "board_size": 50,
-      "n_steps": 500,
-      "n_walkers": 100,
-      "n_iter": 100000,
+      "n_iter": 1,
       "anim_speed": 1,
       "size_exclusion": "without"
+   },
+   "run1": {
+      "name": "100_Agenten_mit_SE",
+      "board_size": 25,
+      "n_steps": 200,
+      "n_walkers": 100,
+      "n_iter": 1,
+      "anim_speed": 1,
+      "size_exclusion": "with"
    }
 }

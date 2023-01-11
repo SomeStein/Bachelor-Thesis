@@ -1,0 +1,9 @@
+[0] Config.pm:304> INFO - This is Biber 2.14
+[0] Config.pm:307> INFO - Logfile is 'BApresentation.blg'
+[100] biber-darwin:322> INFO - === Tue Jan 10, 2023, 12:49:13
+[122] Biber.pm:415> INFO - Reading 'BApresentation.bcf'
+[245] Biber.pm:943> INFO - Found 0 citekeys in bib section 0
+[253] Utils.pm:304> WARN - The file 'BApresentation.bcf' does not contain any citations!
+[264] bbl.pm:652> INFO - Writing 'BApresentation.bbl' with encoding 'UTF-8'
+[264] bbl.pm:755> INFO - Output to BApresentation.bbl
+[265] Biber.pm:128> INFO - WARNINGS: 1
