@@ -1,4 +1,10 @@
+import numpy as np
 
-import numpy
-board_size = 10
-print(numpy.arange(board_size))
+arr = [[2,3],[4,1]]
+
+arr = np.array(arr)
+
+print(arr[[1,0,1,1]])
+print(arr[(1,1)])
+print(arr[1,1])
+print(arr[1][1])

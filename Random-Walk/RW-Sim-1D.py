@@ -52,6 +52,7 @@ def FTCS(dt, dy, t_max, y_max, k, T0):
     return y, T, r, s
 
 
+
 # hardcoded parameters for simulation
 board_size = 100
 n_steps = 1000

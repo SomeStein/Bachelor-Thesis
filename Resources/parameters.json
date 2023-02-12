@@ -1,20 +1,11 @@
 {
    "run0": {
-      "name": "100_Agenten_ohne_SE",
-      "board_size": 25,
-      "n_steps": 200,
-      "n_walkers": 100,
+      "name": "RW",
+      "board_size": 10,
+      "n_steps": 50,
+      "n_walkers": 1,
       "n_iter": 1,
       "anim_speed": 1,
       "size_exclusion": "without"
-   },
-   "run1": {
-      "name": "100_Agenten_mit_SE",
-      "board_size": 25,
-      "n_steps": 200,
-      "n_walkers": 100,
-      "n_iter": 1,
-      "anim_speed": 1,
-      "size_exclusion": "with"
    }
 }

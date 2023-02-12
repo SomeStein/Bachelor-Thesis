@@ -3,10 +3,10 @@
 \defcounter {refsection}{0}\relax 
 \beamer@sectionintoc {1}{Motivation}{2}{0}{1}
 \defcounter {refsection}{0}\relax 
-\beamer@sectionintoc {2}{Random Walk}{8}{0}{2}
+\beamer@sectionintoc {2}{Modelle und Skalen}{4}{0}{2}
 \defcounter {refsection}{0}\relax 
-\beamer@sectionintoc {3}{Simulationen}{10}{0}{3}
+\beamer@sectionintoc {3}{Random Walk}{13}{0}{3}
 \defcounter {refsection}{0}\relax 
-\beamer@sectionintoc {4}{Herleitung der Differentialgleichungen}{13}{0}{4}
+\beamer@sectionintoc {4}{Numerische Simulationen}{18}{0}{4}
 \defcounter {refsection}{0}\relax 
-\beamer@sectionintoc {5}{Konklusion}{14}{0}{5}
+\beamer@sectionintoc {5}{Interpretation der Resultate}{39}{0}{5}

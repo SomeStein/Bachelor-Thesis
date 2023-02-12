@@ -1,0 +1,5 @@
+{
+   "python.analysis.extraPaths": [
+      "./PDSim-System/solvers/RandomWalkSolver"
+   ]
+}
