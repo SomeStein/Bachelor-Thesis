@@ -1,9 +1,9 @@
 {
    "run0": {
-      "name": "RW",
+      "name": "RWTEstTEs",
       "board_size": 10,
-      "n_steps": 50,
-      "n_walkers": 1,
+      "n_steps": 500,
+      "n_walkers": 4,
       "n_iter": 1,
       "anim_speed": 1,
       "size_exclusion": "without"

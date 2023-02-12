@@ -16,49 +16,5 @@
   {}
 \endgroup
 
-
-\refsection{0}
-  \datalist[entry]{nty/global//global/global}
-    \entry{kirchner2003friction}{article}{}
-      \name{author}{3}{}{%
-        {{hash=8f4f603f2953e0709c9028c1a8f9c0c2}{%
-           family={Kirchner},
-           familyi={K\bibinitperiod},
-           given={Ansgar},
-           giveni={A\bibinitperiod}}}%
-        {{hash=566c84c0ac8e517176ced6c9ebff32ff}{%
-           family={Nishinari},
-           familyi={N\bibinitperiod},
-           given={Katsuhiro},
-           giveni={K\bibinitperiod}}}%
-        {{hash=1d9897d81e6826b5e4d91c25a8f4b574}{%
-           family={Schadschneider},
-           familyi={S\bibinitperiod},
-           given={Andreas},
-           giveni={A\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {APS}%
-      }
-      \strng{namehash}{80aee9dbd443f703dcc1132a19ce3a73}
-      \strng{fullhash}{80aee9dbd443f703dcc1132a19ce3a73}
-      \strng{bibnamehash}{80aee9dbd443f703dcc1132a19ce3a73}
-      \strng{authorbibnamehash}{80aee9dbd443f703dcc1132a19ce3a73}
-      \strng{authornamehash}{80aee9dbd443f703dcc1132a19ce3a73}
-      \strng{authorfullhash}{80aee9dbd443f703dcc1132a19ce3a73}
-      \field{sortinit}{K}
-      \field{sortinithash}{d3edc18d54b9438a72c24c925bfb38f4}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Physical review E}
-      \field{number}{5}
-      \field{title}{Friction effects and clogging in a cellular automaton model for pedestrian dynamics}
-      \field{volume}{67}
-      \field{year}{2003}
-      \field{pages}{056122}
-      \range{pages}{1}
-    \endentry
-  \enddatalist
-\endrefsection
 \endinput
 

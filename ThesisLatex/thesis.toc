@@ -5,15 +5,15 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2}Approaches}{ 2 }{section.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1}Lattice Gas}{ 2 }{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.1}Cellular Automata}{ 2 }{subsection.2.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2}Social Force}{ 2 }{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.2}Lattice Gas}{ 2 }{subsection.2.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3}Fluid Dynamics}{ 2 }{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.3}Social Force}{ 2 }{subsection.2.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4}Agent based}{ 2 }{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.4}Fluid Dynamics}{ 2 }{subsection.2.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.5}Cellular Automata}{ 2 }{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.5}Agent based}{ 2 }{subsection.2.5}%
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3}Cellular Automata}{ 3 }{section.3}%
 \defcounter {refsection}{0}\relax 
@@ -25,12 +25,14 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4}Random Walk Simulation}{ 6 }{section.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1}Sequentially updated agents}{ 6 }{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.1}Without size excusion}{ 6 }{subsection.4.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2}Scrambled-Sequentially updated agents}{ 6 }{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.2}Sequentially updated agents}{ 6 }{subsection.4.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3}Parallel updated agents}{ 6 }{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.3}Scrambled-Sequentially updated agents}{ 6 }{subsection.4.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5}Derivation of PDE for macroscopic scale}{ 7 }{section.5}%
+\contentsline {subsection}{\numberline {4.4}Parallel updated agents}{ 7 }{subsection.4.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6}Conclusion}{ 8 }{section.6}%
+\contentsline {section}{\numberline {5}Derivation of PDE for macroscopic scale}{ 8 }{section.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6}Conclusion}{ 9 }{section.6}%

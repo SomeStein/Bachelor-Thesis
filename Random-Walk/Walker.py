@@ -10,7 +10,7 @@ class Walker:
     def __init__(self, x, y, bs):
 
         self.pos = np.array([x, y],dtype=int)
-        self.board_size = bs
+        self.board_sizes = bs
 
         # step choices
         self.dirs = np.array([
@@ -30,7 +30,7 @@ class Walker:
         if r.random() < self.stay_chance:
             return
         step = r.choice(self.dirs)
-        step = (self.pos.copy() + step) % self.board_size
+        step = (self.pos.copy() + step) % self.board_sizes
 
         if SE == "without" or frame[step[0],step[1]] == 0:
             frame[self.pos[0],self.pos[1]] -= 1
