@@ -4,63 +4,106 @@
 \section{Introduction}
 
 Evacuation of pedestrians from hazardous locations is an issue of great importance. 
+One example would be the tragic accident on the loveparade in Duisburg germany 2010 \cite{loveparade}.
 Preventing unwanted outcomes starts by the architectural design of the area.
 Obsticals and hidden exit doors may lead to injuries and even death in the attempt to escape.
 But also the behaviour of the crowd itself can have a bad impact on the time it takes for everyone to evacuate.
-But how can we figure out a way how for example a stadium needs to be build in the first place so that such casualties can be prevented.
+But how can we figure out how for example a stadium needs to be build in the first place so that such casualties can be prevented.
 This question leads to the research of Pedestrian Dynamics. 
-Once a stable model can be derived it can be used to simulate such crowding or evacuation scenarios and as a goal 
-become part of the designing and engeneering process of buildings, streets and parks itself.
+Once a stable model can be derived it can be used to simulate such crowding or evacuation scenarios and, as a goal, 
+become part of the designing and engeneering process of buildings, streets and parks.
 
 One big issue with that is the sheer size of data a programm would have to consider. 
-At this point in time it is just not feasible to simulate every stone and leaf physically accurate
-so there has to be a step of nondimensionalization for it to work. 
+At this point in time, it is just not feasible to simulate every stone and leaf physically accurate
+so there has to be a step of nondimensionalization. 
 This is part of the modelling process. 
-Before choosing a model one has to be clear about what scaling and complexitiy is most suitable for the given usecase.
-Some of them view the pedestrians homogenious (individually) others heterogenious (groups).
-The scaling describes different levels of abstraction of the behaviour.
+Before choosing a model, one has to be clear about what scale and complexitiy is most suitable for the given usecase.
+Some models treat the pedestrians individually  (homogenious) others consider groups (heterogenious) \cite{zheng2009modeling}.
+The scaling describes different levels of abstraction.
 A microscopic scale gives information of the exact location of every particle/individual/agent of the system 
 whilst a macroscopic scale tells more about the overall flow or density. There are also models that use scales in between 
-those two this is refered to as mesoscopic scale. 
+those two, this is refered to as mesoscopic scale \cite{Michi}. 
 Once the scale is clear there is another freedom of choice in time and space descretization. 
 For example the Cellular Automata approach is a model in discrete time and space. 
-In the next chapter there shall be a selection of some models to give a greater insight into the workings of this topic in ressearch.
+In the next section there will be a selection of some models to give a greater insight into the workings of this topic in ressearch.
+
+In this bachelor thesis, we first want to give a picture of the approches, that have been used to model this kind of scenarios. 
+Furthermore we want to focus on the cellular automata approach and give a mathimatical discription of the random walk, 
+which plays a key role in the research on this field of study. 
+In the next topic, we want to compare the behavior of the system under the application of the restrictional parameter called size exclusion.
+In addition, we will show some results from multiple simulations, transition to a macroscopic scale via monte carlo method and compare our findings to 
+the mathimatical derivation of the macroscopic behavior. 
 
 \newpage
 \section{Approaches}
 \subsection{Cellular Automata}
 Cellular automata, or short CA, were first proposed by Von Neumann. 
-The model lives on a grid of cells that are of a tiling shape, most commonly squares.
-Each cell can be seen as a function that has the neighboring cells as argument. 
+The model lives on a grid of cells that are of a tiling shape, most commonly squares \cite{Michi}.
+Each cell can be seen as a function with the neighboring cells as argument. 
 What those neighboring cells are is defined by the shape of the chosen neighborhood. 
-The most common neighborhood would be the Von-Neumann-Neighborhood \ref{abb:pic1}.
-Cellular automata update at discrete time steps, 
-where the value of a cell is determined by the values of the cells in the neighborhood 
-relative to the cell in the last time step. 
+The most common neighborhood would be the Von-Neumann-Neighborhood \autoref{fig:pic1}.
+Cellular automata models are discrete in time, 
+where the value of a cell for the next time step is determined by the values of the cells in the neighborhood. 
 To date, cellular automata have been successfully applied to model the dynamics of traffic, pedestrian movement and biological fields. 
-In the past, cellular automata models have been applied to describe pedestrian dynamics during evacuations, which will be the core idea for this bachelor thesis.
-In the next section the mathimatical discription of the model will be discussed. 
+In the past, cellular automata models have been used to describe pedestrian dynamics during evacuations, which will be the core idea for this bachelor thesis.
+In the next section the mathematical discription of the model will be discussed. 
 
-\begin{figure}[h] % Der Modifier "h" bedeutet, dass die Abbildung möglichst nahe dem zugehörigen Text gesetzt wird.
-   \centering %zentriert das Bild, sonst ist es linksbündig ausgerichtet.
+\begin{figure} 
+   \centering 
    \includegraphics[width=0.8\linewidth]{content/figures/CA_Umgebungen.png} 
    \caption{Visualization of CA neighborhoods.}
-   \label{abb:pic1}
+   \label{fig:pic1}
 \end{figure}
 
-\subsection{Lattice Gas}
 \subsection{Social Force}
+The social force model was proposed by Helbing and Molnar \cite{helbing1995social}.
+It is a continuous, microscopic model and discribes the motion of agents by an equation with terms for desired velocity and destination and repulsion from obsticals and other agents.
+These forces get combined for a effective force hence the name. 
+
 \subsection{Fluid Dynamics}
+The movement of pedestrians in large quantaties has similarites to the dynamics of fluids. 
+In this continuous, macroscopic model pedestrians are seen as fluid particals. 
+It is most accurate on very high densities like pedestrian zones of larger cities. 
+Here analogies can be made between movement of crowds and streamlines of fluids.
+
 \subsection{Agent based}
+The before mentioned models lack in a particular ability to uniquely define behavior of individual agents. 
+This is where this model comes into play. 
+A highly microscopic model continuous in space and time. 
+It can simulate the complex behavior of crowds in an emergency situation. 
+It can accurately predict chaotic interactions between multiple agents and is therefore a heterogenious model. 
+Successfully applied to simulate a metro system in the case of a fire \cite{zarboutis2004searching}.
+But the model comes with a flaw. 
+It is usually more computational demanding and therefore can be restrictive of the size of the simulation. 
 
 
 \newpage
 \section{Cellular Automata}
+After discussing multiple approaches to model the movement of crowds we now want to focus on the cellular automata model. 
+First we need a mathematical discription of that model. This leads to the so called master equation. 
+Which is defined by multiple parameters\cite{Michi}.
+
+\subsection{Master Equation}
+Every Cellular Automata model can be described by this master equation, that looks as follows: 
+\begin{equation}
+   \label{eq:eq1}
+   \begin{split}
+   \rho(x,t+\Delta t) - \rho(x,t)  = & - \rho(x,t)\mathcal{T}^{+}(x,t) 
+   \\ & - \rho(x,t)\mathcal{T}^{-}(x,t) 
+   \\ & + \rho(x +\Delta x,t)\mathcal{T}^{-}(x + \Delta x,t)
+   \\ & + \rho(x -\Delta x,t)\mathcal{T}^{+}(x - \Delta x,t) 
+   \end{split}
+\end{equation}
+This is the 1-dimensional version. Where $\rho$ stands for the occupation of the cell at position $ x $ and time $ t $ with $\rho \in \{0,1\} $, 
+$ \mathcal{T}^{\pm}$ stands for the so called transition rate on which probability an agent wants to step in the positive or negative direction from that cell.
+Extrapolating this into higher dimensions is straight forward. We then would have $ \mathcal{T}: D_x^{n}\times D_t \to [0,1]^{2n} $ for the dimension $\dim = n$.
+
+
 \subsection{Random Walk}
 The Random Walk is a discrete stochastic process. Here it is defined in a 2D lattice space consisting of cells. Every cell can be occupied by an agent. 
 This is denoted by an encrease of the cells value of 1. 
 Later in the works of the macroscopic modelling the values are often determined by a monte-carlo-method and get normalized. 
-Sometimes in research this corresponding variable is mentioned as population-density.
+Sometimes in research this corresponding variable is mentioned as population-density \cite{Michi}.
 
 A random walk in two dimensions is a mathematical model used to describe the movement of an object or particle that is randomly moving in two-dimensional space. 
 The movement of the object is determined by a series of random steps in the horizontal (x) and vertical (y) directions.
@@ -149,6 +192,16 @@ In the macroscopic scale this friction parameter is introduced by a constant in 
 
 \newpage
 \section{Derivation of PDE for macroscopic scale}
+Our goal now is to use the master equation to predict the overall behavior of our model mathematically and compare the results to our simulations. 
+This process leads to a macroscopic scaling, so the results we had before are not quite compatible with the results we will derive from that step.
+We want to compare a change in density rather then trajectories of individual agents. 
+
+\subsection{Monte Carlo Simulation}
+To better analyse the effects that are emerging from differnt choices of our parameters, 
+its best to make a transition from micro- to macroscopic scale.
+For that we use a so called Monte Carlo method. We iterate over vast quanteties of simulations and calculate the mean values of each cell 
+to derive a probability density for the occupation of each cell. 
+
 The heat equatoion is a partial differantial equation that describes the movement of heat or energy in a given system.
 It is a fundamental equation in the fields of engineering, physics and chemistry.
 

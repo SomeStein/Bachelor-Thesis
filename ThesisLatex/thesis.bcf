@@ -2182,6 +2182,14 @@
     <bcf:datasource type="file" datatype="bibtex">./content/references.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
+    <bcf:citekey order="1">loveparade</bcf:citekey>
+    <bcf:citekey order="2">zheng2009modeling</bcf:citekey>
+    <bcf:citekey order="3">Michi</bcf:citekey>
+    <bcf:citekey order="4">Michi</bcf:citekey>
+    <bcf:citekey order="5">helbing1995social</bcf:citekey>
+    <bcf:citekey order="6">zarboutis2004searching</bcf:citekey>
+    <bcf:citekey order="7">Michi</bcf:citekey>
+    <bcf:citekey order="8">Michi</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">

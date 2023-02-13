@@ -16,5 +16,162 @@
   {}
 \endgroup
 
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{Michi}{thesis}{}
+      \name{author}{1}{}{%
+        {{hash=37113265dfdad1025473c24cc87cef94}{%
+           family={Fischer},
+           familyi={F\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Universität Wien}%
+      }
+      \strng{namehash}{37113265dfdad1025473c24cc87cef94}
+      \strng{fullhash}{37113265dfdad1025473c24cc87cef94}
+      \strng{bibnamehash}{37113265dfdad1025473c24cc87cef94}
+      \strng{authorbibnamehash}{37113265dfdad1025473c24cc87cef94}
+      \strng{authornamehash}{37113265dfdad1025473c24cc87cef94}
+      \strng{authorfullhash}{37113265dfdad1025473c24cc87cef94}
+      \field{sortinit}{F}
+      \field{sortinithash}{fb0c0faa89eb6abae8213bf60e6799ea}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Applications of interacting particle systems in life- and social-sciences across scales}
+      \field{type}{phdthesis}
+      \field{year}{2022}
+    \endentry
+    \entry{helbing1995social}{article}{}
+      \name{author}{2}{}{%
+        {{hash=6f85b2d8868cd1e16ae5c55cf158b6ce}{%
+           family={Helbing},
+           familyi={H\bibinitperiod},
+           given={Dirk},
+           giveni={D\bibinitperiod}}}%
+        {{hash=32c4959c98a623a880f165c201c8edd2}{%
+           family={Molnar},
+           familyi={M\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {APS}%
+      }
+      \strng{namehash}{00ad541534b36b408e1d0e8560f1b151}
+      \strng{fullhash}{00ad541534b36b408e1d0e8560f1b151}
+      \strng{bibnamehash}{00ad541534b36b408e1d0e8560f1b151}
+      \strng{authorbibnamehash}{00ad541534b36b408e1d0e8560f1b151}
+      \strng{authornamehash}{00ad541534b36b408e1d0e8560f1b151}
+      \strng{authorfullhash}{00ad541534b36b408e1d0e8560f1b151}
+      \field{sortinit}{H}
+      \field{sortinithash}{6db6145dae8dc9e1271a8d556090b50a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Physical review E}
+      \field{number}{5}
+      \field{title}{Social force model for pedestrian dynamics}
+      \field{volume}{51}
+      \field{year}{1995}
+      \field{pages}{4282}
+      \range{pages}{1}
+    \endentry
+    \entry{loveparade}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=334c4a4c42fdb79d7ebc3e73b517e6f8}{%
+           family={none},
+           familyi={n\bibinitperiod}}}%
+      }
+      \strng{namehash}{334c4a4c42fdb79d7ebc3e73b517e6f8}
+      \strng{fullhash}{334c4a4c42fdb79d7ebc3e73b517e6f8}
+      \strng{bibnamehash}{334c4a4c42fdb79d7ebc3e73b517e6f8}
+      \strng{authorbibnamehash}{334c4a4c42fdb79d7ebc3e73b517e6f8}
+      \strng{authornamehash}{334c4a4c42fdb79d7ebc3e73b517e6f8}
+      \strng{authorfullhash}{334c4a4c42fdb79d7ebc3e73b517e6f8}
+      \field{sortinit}{n}
+      \field{sortinithash}{98cf339a479c0454fe09153a08675a15}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.tagesschau.de/multimedia/bilder/massenpanik112.html}}
+      \field{note}{[Online; accessed 10-January-2023]}
+      \field{title}{{Massenpanik in Duisburg}}
+      \field{year}{2010}
+    \endentry
+    \entry{zarboutis2004searching}{article}{}
+      \name{author}{2}{}{%
+        {{hash=8ce76a242c4406b787457040fdcd8eaf}{%
+           family={Zarboutis},
+           familyi={Z\bibinitperiod},
+           given={Nikos},
+           giveni={N\bibinitperiod}}}%
+        {{hash=8e26f2e0386f291ea4f2a4210ac03bf7}{%
+           family={Marmaras},
+           familyi={M\bibinitperiod},
+           given={Nicolas},
+           giveni={N\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{b452e67f0ac5d5b764e54d5cc9a49abb}
+      \strng{fullhash}{b452e67f0ac5d5b764e54d5cc9a49abb}
+      \strng{bibnamehash}{b452e67f0ac5d5b764e54d5cc9a49abb}
+      \strng{authorbibnamehash}{b452e67f0ac5d5b764e54d5cc9a49abb}
+      \strng{authornamehash}{b452e67f0ac5d5b764e54d5cc9a49abb}
+      \strng{authorfullhash}{b452e67f0ac5d5b764e54d5cc9a49abb}
+      \field{sortinit}{Z}
+      \field{sortinithash}{8f7b480688e809b50b6f6577b16f3db5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Cognition, Technology \& Work}
+      \field{title}{Searching efficient plans for emergency rescue through simulation: the case of a metro fire}
+      \field{volume}{6}
+      \field{year}{2004}
+      \field{pages}{117\bibrangedash 126}
+      \range{pages}{10}
+    \endentry
+    \entry{zheng2009modeling}{article}{}
+      \name{author}{3}{}{%
+        {{hash=efa1d23af8513da8db7743bfe0f56816}{%
+           family={Zheng},
+           familyi={Z\bibinitperiod},
+           given={Xiaoping},
+           giveni={X\bibinitperiod}}}%
+        {{hash=07365aa99185cdc92c0ee5077ab5db82}{%
+           family={Zhong},
+           familyi={Z\bibinitperiod},
+           given={Tingkuan},
+           giveni={T\bibinitperiod}}}%
+        {{hash=2717fa23f432b49a823ea30133fdba49}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Mengting},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{dc5a980e200222ed67baf2f484dc691b}
+      \strng{fullhash}{dc5a980e200222ed67baf2f484dc691b}
+      \strng{bibnamehash}{dc5a980e200222ed67baf2f484dc691b}
+      \strng{authorbibnamehash}{dc5a980e200222ed67baf2f484dc691b}
+      \strng{authornamehash}{dc5a980e200222ed67baf2f484dc691b}
+      \strng{authorfullhash}{dc5a980e200222ed67baf2f484dc691b}
+      \field{sortinit}{Z}
+      \field{sortinithash}{8f7b480688e809b50b6f6577b16f3db5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Building and environment}
+      \field{number}{3}
+      \field{title}{Modeling crowd evacuation of a building based on seven methodological approaches}
+      \field{volume}{44}
+      \field{year}{2009}
+      \field{pages}{437\bibrangedash 445}
+      \range{pages}{9}
+    \endentry
+  \enddatalist
+\endrefsection
 \endinput
 
