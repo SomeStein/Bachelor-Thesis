@@ -1,17 +1,29 @@
-import sys 
-import os
 
-#adding solver paths
-sys.path.append(os.path.abspath("PDSim-System/solvers/RandomWalkSolver"))
-sys.path.append(os.path.abspath("PDSim-System/solvers/HeatEquationSolver"))
+from RW import RandomWalkGrid
+from Animation import generate_animation
 
-from board import Board
+"""
+This is the main script that should be used for simulating. 
+workflow is:
+   * defining a Grid (dimensions)
+   * the grid class can: 
+   show its current state (terminal, matplot), 
+   save its current state (path, current_step), 
+   simulate (algorithm parameters, num_steps, save_path, num_iterations) #show current iteration state in terminal
+   * render a matplot animation from filepaths (subplots dimensions, size, paths for subplots, matrix or graph)
 
-board = Board((100,20),True, "von neumann", True)
+"""
 
-# board.calculate(1000, 10000, 100)
+width = 50
+height = 50
+n_iterations=10000
 
-# board.render(vm = 3, simspeed = 24, size = (10,10))
+initial_data = [(int(width/2), int(height/2)) for i in range(100)]
 
-# board.save 
+model = RandomWalkGrid(width, height, initial_data=initial_data)
 
+model.simulate(n_steps=500, n_iterations = n_iterations, size_exclusion=True,
+               parallel=True, friction=0)
+
+generate_animation(model.last_save_path, model.width,
+                   model.height, model.n_agents, vmax = 3000, n_iterations = n_iterations)
