@@ -127,9 +127,9 @@ class RandomWalkGrid:  # Grid class for random walk agents
 
                   else:
 
-                     indices = find_indices(desired, desired_pos)
-
                      if random.random() > friction:
+                        
+                        indices = find_indices(desired, desired_pos)
                         index = random.choice(indices)
 
                         self.state[self.agents[index][1],
@@ -138,7 +138,7 @@ class RandomWalkGrid:  # Grid class for random walk agents
                         self.state[self.agents[index][1],
                                    self.agents[index][0]] += 1
 
-                     already_checked += indices
+                        already_checked += indices
 
             return self.state
 
@@ -185,7 +185,10 @@ class RandomWalkGrid:  # Grid class for random walk agents
             path = f"PDSim-System/Resources/RW_{self.width}x{self.height}_a{self.n_agents}_s{n_steps}_i{n_iterations}"
             
       self.last_save_path = path
-      
+            
+      if os.path.isfile(path):
+         return
+            
       # initializing boards
       sums = []
       boards = []
@@ -217,8 +220,8 @@ class RandomWalkGrid:  # Grid class for random walk agents
          # appending calculated sum board for step k to sums list
          sums.append(iteration_sum)
 
-      # after finishing calculation take sum values of every step
-      sums = np.array(sums)
+      # after finishing calculation take mean of values 
+      sums = np.array(sums)/n_iterations
 
       # saving data to csv file on path
       if path:

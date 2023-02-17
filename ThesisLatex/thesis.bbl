@@ -19,6 +19,33 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global}
+    \entry{ehrhardt2013not}{article}{}
+      \name{author}{1}{}{%
+        {{hash=4a9d47d051580a9bd88e055c45f5a6d3}{%
+           family={Ehrhardt},
+           familyi={E\bibinitperiod},
+           given={George},
+           giveni={G\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Taylor \& Francis}%
+      }
+      \strng{namehash}{4a9d47d051580a9bd88e055c45f5a6d3}
+      \strng{fullhash}{4a9d47d051580a9bd88e055c45f5a6d3}
+      \strng{bibnamehash}{4a9d47d051580a9bd88e055c45f5a6d3}
+      \strng{authorbibnamehash}{4a9d47d051580a9bd88e055c45f5a6d3}
+      \strng{authornamehash}{4a9d47d051580a9bd88e055c45f5a6d3}
+      \strng{authorfullhash}{4a9d47d051580a9bd88e055c45f5a6d3}
+      \field{sortinit}{E}
+      \field{sortinithash}{c554bd1a0b76ea92b9f105fe36d9c7b0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Statistics Education}
+      \field{number}{2}
+      \field{title}{The Not-so-Random Drunkard's Walk}
+      \field{volume}{21}
+      \field{year}{2013}
+    \endentry
     \entry{Michi}{thesis}{}
       \name{author}{1}{}{%
         {{hash=37113265dfdad1025473c24cc87cef94}{%
@@ -77,6 +104,74 @@
       \field{year}{1995}
       \field{pages}{4282}
       \range{pages}{1}
+    \endentry
+    \entry{keller1970initiation}{article}{}
+      \name{author}{2}{}{%
+        {{hash=13d49240c14903a50d17213660add69a}{%
+           family={Keller},
+           familyi={K\bibinitperiod},
+           given={Evelyn\bibnamedelima F},
+           giveni={E\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=14035e9d1c10e7bb1190e77285e04a0b}{%
+           family={Segel},
+           familyi={S\bibinitperiod},
+           given={Lee\bibnamedelima A},
+           giveni={L\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{e478719d7cee7b1b58926ea79745c297}
+      \strng{fullhash}{e478719d7cee7b1b58926ea79745c297}
+      \strng{bibnamehash}{e478719d7cee7b1b58926ea79745c297}
+      \strng{authorbibnamehash}{e478719d7cee7b1b58926ea79745c297}
+      \strng{authornamehash}{e478719d7cee7b1b58926ea79745c297}
+      \strng{authorfullhash}{e478719d7cee7b1b58926ea79745c297}
+      \field{sortinit}{K}
+      \field{sortinithash}{d3edc18d54b9438a72c24c925bfb38f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of theoretical biology}
+      \field{number}{3}
+      \field{title}{Initiation of slime mold aggregation viewed as an instability}
+      \field{volume}{26}
+      \field{year}{1970}
+      \field{pages}{399\bibrangedash 415}
+      \range{pages}{17}
+    \endentry
+    \entry{kirchner2002simulation}{article}{}
+      \name{author}{2}{}{%
+        {{hash=8f4f603f2953e0709c9028c1a8f9c0c2}{%
+           family={Kirchner},
+           familyi={K\bibinitperiod},
+           given={Ansgar},
+           giveni={A\bibinitperiod}}}%
+        {{hash=1d9897d81e6826b5e4d91c25a8f4b574}{%
+           family={Schadschneider},
+           familyi={S\bibinitperiod},
+           given={Andreas},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{f2a8bbac3d39a3655c9eec6253a5933e}
+      \strng{fullhash}{f2a8bbac3d39a3655c9eec6253a5933e}
+      \strng{bibnamehash}{f2a8bbac3d39a3655c9eec6253a5933e}
+      \strng{authorbibnamehash}{f2a8bbac3d39a3655c9eec6253a5933e}
+      \strng{authornamehash}{f2a8bbac3d39a3655c9eec6253a5933e}
+      \strng{authorfullhash}{f2a8bbac3d39a3655c9eec6253a5933e}
+      \field{sortinit}{K}
+      \field{sortinithash}{d3edc18d54b9438a72c24c925bfb38f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Physica A: statistical mechanics and its applications}
+      \field{number}{1-2}
+      \field{title}{Simulation of evacuation processes using a bionics-inspired cellular automaton model for pedestrian dynamics}
+      \field{volume}{312}
+      \field{year}{2002}
+      \field{pages}{260\bibrangedash 276}
+      \range{pages}{17}
     \endentry
     \entry{loveparade}{misc}{}
       \name{author}{1}{}{%
