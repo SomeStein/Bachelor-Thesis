@@ -99,7 +99,7 @@ class RandomWalkGrid:  # Grid class for random walk agents
 
    # update position of agents according to parameters
    def update(self, size_exclusion=False, parallel=False, friction=0):
-
+   
       if size_exclusion:
          if parallel:
 
@@ -126,8 +126,9 @@ class RandomWalkGrid:  # Grid class for random walk agents
                      self.state[agent[1], agent[0]] += 1
 
                   else:
-
+                     
                      if random.random() > friction:
+                        
                         
                         indices = find_indices(desired, desired_pos)
                         index = random.choice(indices)
@@ -152,6 +153,7 @@ class RandomWalkGrid:  # Grid class for random walk agents
                self.state[self.agents[i][1], self.agents[i][0]] -= 1
                self.agents[i] = (x, y)
                self.state[y, x] += 1
+               
 
          return self.state
 
@@ -168,10 +170,9 @@ class RandomWalkGrid:  # Grid class for random walk agents
       return self.state
 
    # makes a monte carlo simulation saves everything in desired path and gives status updates of the simulation in terminal
-   def simulate(self, n_steps=1, n_iterations=1, size_exclusion=False, parallel=False, friction=0, path=None):
+   def simulate(self, n_steps=1, n_iterations=1, size_exclusion=False, parallel=False, friction=0, path=None, force_simulation = False):
 
-      # starting time for ETA estimation
-      start = time.time()
+      #clearing terminal
       os.system("clear")
       
       if not path:
@@ -186,7 +187,7 @@ class RandomWalkGrid:  # Grid class for random walk agents
             
       self.last_save_path = path
             
-      if os.path.isfile(path):
+      if os.path.isfile(path) and not force_simulation:
          return
             
       # initializing boards
@@ -200,6 +201,9 @@ class RandomWalkGrid:  # Grid class for random walk agents
       for i in range(n_iterations):
          sum += boards[i].state
       sums.append(sum)
+      
+      # starting time for ETA estimation
+      start = time.time()
 
       # Main Loop
       for k in range(n_steps):

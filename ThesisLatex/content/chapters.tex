@@ -6,85 +6,116 @@
 Evacuation of pedestrians from hazardous locations is an issue of great importance. 
 One example would be the tragic accident on the loveparade in Duisburg germany 2010 \cite{loveparade}.
 Preventing unwanted outcomes starts by the architectural design of the area.
-Obsticals and hidden exit doors may lead to injuries and even death in the attempt to escape.
-But also the behaviour of the crowd itself can have a bad impact on the time it takes for everyone to evacuate.
-But how can we figure out how for example a stadium needs to be build in the first place so that such casualties can be prevented.
+Obstacles and hidden exit doors may lead to injuries and even death in the attempt of escaping.
+But also the behavior of the crowd itself, can have a bad impact on the time it takes for everyone to evacuate.
+But how can we figure out, how for example a stadium needs to be build in the first place, so that such casualties can be prevented.
 This question leads to the research of Pedestrian Dynamics. 
-Once a stable model can be derived it can be used to simulate such crowding or evacuation scenarios and, as a goal, 
+Once a stable model can be derived, it can be used to simulate such crowding or evacuation scenarios and, as a goal, 
 become part of the designing and engeneering process of buildings, streets and parks.
 
-One big issue with that is the sheer size of data a programm would have to consider. 
-At this point in time, it is just not feasible to simulate every stone and leaf physically accurate
-so there has to be a step of nondimensionalization. 
+One big issue with that is the sheer size of data a program would have to consider. 
+At this point in time, it is just not feasible to simulate every stone and leaf physically accurate.
+So there has to be a step of nondimensionalization. 
 This is part of the modelling process. 
-Before choosing a model, one has to be clear about what scale and complexitiy is most suitable for the given usecase.
+Before choosing a model, one has to be clear about what scale and complexity is most suitable for the given usecase.
 Some models treat the pedestrians individually  (homogenious) others consider groups (heterogenious) \cite{zheng2009modeling}.
 The scaling describes different levels of abstraction.
-A microscopic scale gives information of the exact location of every particle/individual/agent of the system 
+A microscopic scale gives information of the exact location of every particle/individual/agent of the system,
 whilst a macroscopic scale tells more about the overall flow or density. There are also models that use scales in between 
-those two, this is refered to as mesoscopic scale \cite{Michi}. 
+those two. This is refered to as mesoscopic scale \cite{Michi}. 
 Once the scale is clear there is another freedom of choice in time and space descretization. 
 For example the Cellular Automata approach is a model in discrete time and space. 
-In the next section there will be a selection of some models to give a greater insight into the workings of this topic in ressearch.
+In the next section there will be a selection of some models, to give a greater insight into the workings of this topic in research.
 
-In this bachelor thesis, we first want to give a picture of the approches, that have been used to model this kind of scenarios. 
-Furthermore we want to focus on the cellular automata approach and give a mathimatical discription of the random walk, 
+In this bachelor thesis, we first want to give a picture of the approches, that have been used to model these scenarios. 
+Furthermore we want to focus on the Cellular Automata approach and give a mathematical description of the Random Walk, 
 which plays a key role in the research on this field of study. 
-In the next topic, we want to compare the behavior of the system under the application of the restrictional parameter called size exclusion.
-In addition, we will show some results from multiple simulations, transition to a macroscopic scale via monte carlo method and compare our findings to 
-the mathimatical derivation of the macroscopic behavior. 
+In the next topic, we want to compare the behavior of the system under the application of the restrictional parameter called Size Exclusion.
+In addition, we will show some results from multiple simulations, transition to a macroscopic scale via Monte Carlo method and compare our findings to 
+the mathematical derivation of the macroscopic behavior. 
 
 \newpage
 \section{Approaches}
 \subsection{Cellular Automata}
 Cellular automata, or short CA, were first proposed by Von Neumann. 
-The model lives on a grid of cells that are of a tiling shape, most commonly squares \cite{Michi}.
+The model lives on a grid of cells, that are of a tiling shape, most commonly squares.
 Each cell can be seen as a function with the neighboring cells as argument. 
 What those neighboring cells are is defined by the shape of the chosen neighborhood. 
-The most common neighborhood would be the Von-Neumann-Neighborhood \autoref{fig:pic1}.
-Cellular automata models are discrete in time, 
+The most common neighborhood would be the Von-Neumann-Neighborhood, see \autoref*{fig:fig1}.
+CA models are discrete in time, 
 where the value of a cell for the next time step is determined by the values of the cells in the neighborhood. 
-To date, cellular automata have been successfully applied to model the dynamics of traffic, pedestrian movement and biological fields. 
-In the past, cellular automata models have been used to describe pedestrian dynamics during evacuations, which will be the core idea for this bachelor thesis.
+To date, CA models have been successfully applied to model the dynamics of traffic, pedestrian movement and biological fields. 
+In the past, they have been used to describe pedestrian dynamics during evacuations, which will be the core idea for this bachelor thesis.
 In the next section the mathematical discription of the model will be discussed. 
 
 \begin{figure}[h]
    \centering 
    \includegraphics[width=0.8\linewidth]{content/figures/CA_Umgebungen.png} 
    \caption{Visualization of CA neighborhoods.}
-   \label{fig:pic1}
+   \url{https://onlinelibrary.wiley.com/cms/asset/9840368b-1a80-4463-9d8a-311fba191c69/dneu22686-fig-0001-m.jpg}
+   \label{fig:fig1}
 \end{figure}
 
 \subsection{Social Force}
 The social force model was proposed by Helbing and Molnar \cite{helbing1995social}.
-It is a continuous, microscopic model and discribes the motion of agents by an equation with terms for desired velocity and destination and repulsion from obsticals and other agents.
-These forces get combined for a effective force hence the name. 
+It is a continuous, microscopic model and discribes the motion of agents by an equation with terms for desired velocity and destination and repulsion from obstacles and other agents.
+These forces get combined for an effective force, hence the name. This looks like this:
+\begin{equation}
+   \begin{split}
+      \underbrace{\overrightarrow{F_\alpha}(t)}_\text{effective Force} = & \underbrace{\overrightarrow{F_\alpha}^{0}(\overrightarrow{\nu_\alpha},\nu_\alpha^{0} \overrightarrow{e_\alpha})}_\text{Force of desired position and velocity}
+      + \underbrace{\sum\nolimits_{\beta} \overrightarrow{F_\alpha\beta}(\overrightarrow{e_\alpha},\overrightarrow{x_\alpha} - \overrightarrow{x_\beta})}_\text{Repulsion of other agents}
+     \\ & + \underbrace{\sum\nolimits_{B} \overrightarrow{F_{\alpha B}}(\overrightarrow{e_\alpha},\overrightarrow{x_\alpha} - \overrightarrow{x_\beta}^{\alpha})}_\text{Repulsion of borders B}
+      + \underbrace{\sum\nolimits_{i} \overrightarrow{F_{\alpha i}}(\overrightarrow{e_\alpha},\overrightarrow{x_\alpha} - \overrightarrow{x_i}, t)}_\text{Attraction forces}
+   \end{split}
+\end{equation} 
+Where $ \overrightarrow{\nu_\alpha}$ and $\nu_\alpha^{0}$ are the velocity and desired velocity of agent $\alpha$; 
+$ \overrightarrow{e_\alpha}$ the desired motion direction of agent $\alpha$; 
+$\overrightarrow{x_\alpha}$ the position of agent $\alpha$ and 
+$\overrightarrow{x_\beta}^{\alpha}$ the location of the border $B$ nearest to agent $\alpha$.
+The resulting equations are nonlinearly coupled Langevin equations \cite{PhysRevE.51.4282}.
+The model is capable of replicating complex, self-organized behavior.  
 
 \subsection{Fluid Dynamics}
-The movement of pedestrians in large quantaties has similarites to the dynamics of fluids. 
-In this continuous, macroscopic model pedestrians are seen as fluid particals. 
-It is most accurate on very high densities like pedestrian zones of larger cities. 
+Henderson \cite{henderson1971statistics} proposed, that the movement of pedestrians in large quantities has similarites to the dynamics of fluids. 
+In this continuous, macroscopic model pedestrians are seen as fluid particles.  
+It is most accurate on very high densities, like pedestrian zones of larger cities, and it was hypothesized \cite{bradley1993proposed} that, 
+in that case, the Navier-Stokes equations could be used to describe the motion of the agents/particles. 
 Here analogies can be made between movement of crowds and streamlines of fluids.
+This is what can be observed from a statistical standpoint. 
+One Model would be of the Form: 
+\begin{equation}
+   \frac{\partial \rho}{\partial t} + \frac{\partial}{\partial x}(\rho u) + \frac{\partial}{\partial y}(\rho v) = 0
+\end{equation}
+$\rho$ is the density of the agents interpreted as number of individuals within one unit area;
+$(u,v)$ is the velocity of the agents at time $t$ and position $(x,y)$, see \cite{hughes2002continuum}.
+Since we speek of a density it is a macroscopic model.
 
-\subsection{Agent based}
+\subsection{Individual Agent based}
 The before mentioned models lack in a particular ability to uniquely define behavior of individual agents. 
-This is where this model comes into play. 
-A highly microscopic model continuous in space and time. 
-It can simulate the complex behavior of crowds in an emergency situation. 
-It can accurately predict chaotic interactions between multiple agents and is therefore a heterogenious model. 
-Successfully applied to simulate a metro system in the case of a fire \cite{zarboutis2004searching}.
-But the model comes with a flaw. 
-It is usually more computational demanding and therefore can be restrictive of the size of the simulation. 
+Individual agent based models or sometimes agent based models (ABM's \cite{goldstone2005computational}), are
+microscopic, heterogenious models continuous in space and time. 
+They can simulate the complex behavior of crowds in an emergency situation and accurately predict chaotic interactions between multiple agents. 
+There were successful applications. For example one model simulating a metro system in the case of a fire \cite{zarboutis2004searching}.
+Due to its highly adjustable nature, 
+it is usually more computational demanding and therefore can be restrictive to the size of the simulation. 
+For a computational model see \autoref*{fig:fig2}.
+
+\begin{figure}[h]
+   \centering 
+   \includegraphics[width=0.8\linewidth]{content/figures/ABMdiagram.png} 
+   \caption{Simulation diagram of ABM, see \cite{pan2007multi}}
+   \label{fig:fig2}
+\end{figure}
 
 
 \newpage
 \section{Cellular Automata}
-After discussing multiple approaches to model the movement of crowds we now want to focus on the cellular automata model. 
-First we need a mathematical discription of that model. This leads to the so called master equation. 
+After discussing multiple approaches to model the movement of crowds, we now want to focus on the CA model. 
+First we need a mathematical description of that model. This leads to the so-called master equation (ME). 
 Which is defined by multiple parameters \cite{Michi}.
 
 \subsection{Master Equation}
-Every Cellular Automata model can be described by this master equation, that looks as follows: 
+Most CA models can be described by this master equation, that looks as follows: 
 \begin{equation}
    \label{eq:eq1}
    \begin{split}
@@ -94,83 +125,123 @@ Every Cellular Automata model can be described by this master equation, that loo
    \\ & + \rho(x -\Delta x,t)\mathcal{T}^{+}(x - \Delta x,t) 
    \end{split}
 \end{equation}
-This is the 1-dimensional version. Where $\rho$ stands for the occupation of the cell at position $ x $ and time $ t $ with $\rho \in \{0,1\} $, 
-$ \mathcal{T}^{\pm}$ stands for the so called transition rate on which probability an agent wants to step in the positive or negative direction from that cell.
+This is the 1-dimensional version, where $\rho$ stands for the occupation of the cell at position $ x $ and time $ t $ with $\rho \in \{0,1\} $, 
+$ \mathcal{T}^{\pm}$ stands for the so-called transition rate on which probability an agent wants to step in the positive or negative direction from that cell.
 Extrapolating this into higher dimensions is straight forward. We then would have $ \mathcal{T}: D_x^{n}\times D_t \to [0,1]^{2n} $ for the dimension $\dim = n$, 
 where $D_x$ and $D_t$ are the discrete domains for $x$ and $t$ respectively and get 4 more terms of the same kind for every dimension added. 
 We can now use this Equation to develop a model that suits our purposes. 
-For that we can define $ \mathcal{T} $. For example choosing $ \mathcal{T} = const$ refers to the random walk. 
+For that we can define $ \mathcal{T} $. For example choosing $ \mathcal{T} = const$ refers to the Random Walk. 
 
 
 \subsection{Random Walk}
-The Random Walk is a discrete stochastic process. Here it is defined in a 2D lattice space consisting of cells. Every cell can be occupied by an agent. 
+The Random Walk (RW) is a discrete stochastic process. Here it is defined in a 2D lattice space consisting of cells. Every cell can be occupied by an agent. 
 This is denoted by an encrease of the cells value of 1. 
-Later in the works of the macroscopic modelling the values are often iterated by a monte-carlo-method and get normalized. 
+Later in the works of the macroscopic modelling, the values are often iterated by a Monte Carlo method and get normalized. 
 Sometimes in research this corresponding variable is mentioned as population-density \cite{Michi}.
 
-A random walk in two dimensions is a mathematical model used to describe the movement of an object or particle that is randomly moving in two-dimensional space. 
+A Random Walk in two dimensions is a mathematical model used to describe the movement of an object or particle that is randomly moving in two-dimensional space. 
 The movement of the object is determined by a series of random steps in the horizontal (x) and vertical (y) directions.
-In a simple random walk, each step is equally likely to be in any of the four cardinal directions (north, south, east, or west). 
-The probability of the object moving in a particular direction is equal to 1/4. The distance the object moves in each step is often assumed to be constant, 
+In a simple Random Walk, each step is equally likely to be in any of the four cardinal directions (north, south, east, or west). 
+The probability of the object moving in a particular direction is, historically, equal to 1/4. 
+We will later see why this might be wise to be changed to 1/5. 
+The distance the object moves in each step is often assumed to be constant, 
 but it can also be a random variable.
-The path of the object over a series of steps forms a random walk, which is a type of stochastic process. The behavior of the random walk 
+The path of the object over a series of steps forms a Random Walk, which is a type of stochastic process. The behavior of the Random Walk
 can be studied using probability theory and statistical analysis. 
-One interesting aspect of random walks in two dimensions is that, despite the seemingly chaotic nature of the movement, there are patterns that emerge over time. 
+One interesting aspect of Random Walks in two dimensions is that, despite the seemingly chaotic nature of the movement, there are patterns that emerge over time. 
 For example, the object is more likely to be found further from the starting point as the number of steps increases. 
 This is because the object has a greater chance of moving away from the starting point than it does of returning to it.
-Another interesting property of random walks in two dimensions is that, on average, the object will return to its starting point after a large number of steps, 
+Another interesting property of Random Walks in two dimensions is that, on average, the object will return to its starting point after a large number of steps, 
 regardless of the specific path it takes. This is known as the "drunkard's walk" phenomenon \autocite{ehrhardt2013not}, as it is often used to model the movements of a drunken person trying to walk in a straight line.
-Random walks in two dimensions have a wide range of applications, including modeling the movement of particles in gases and liquids, 
+Random Walks in two dimensions have a wide range of applications, including modeling the movement of particles in gases and liquids, 
 the spread of diseases, and even the behavior of financial markets.
 
 There are multiple versions for the Random Walk and its a non-trivial task to choose the right one for the specified purpose. 
-Since we want to simulate the movement of humans at the top level of this work the ruleset has to be grounded in physical accuracy. 
-At its core the Random Walks movement is defined by the neighboring cells, a given agent can step into and the probability of which this cell is chosen. 
+Since we want to simulate the movement of humans, at the top level of this work, the ruleset has to be grounded in physical accuracy. 
+At its core the Random Walks movement is defined by the neighboring cells, a given agent can step into, and the probability of which this cell is chosen. 
 In the most used combination every agent can step into a adjecent cell (not diagonally) with equal probabilities.
 This alone leads to an undesired effect that all the cells can only be occupied exactly every second timestep, a checkerboard pattern 
 emerges and totally breaks any attempt of smoothing on a macroscopic scale. 
-This is a well known effect in probability theory as well as in the field of stochastic processes.
-So to prevent this the agent is also allowed to stay at its location. 
-In this thesis we discuss multiple versions that build on top of that core ruleset. 
+This is a well known effect in probability theory, as well as in the field of stochastic processes.
+So to prevent this, the agent is also allowed to stay at its location. 
+In this thesis we discuss multiple versions, that build on top of that core ruleset. 
 
 \subsection{Size Exclusion}
-The main subject of this bachelor thesis is the comparison of the micro- and macroscopic behavior, when agents are allowed to overlap or not.
-In the research of pedestrian dynamics this parameter is called size exclusion. In this chapter we want to define, and analyse this parameter and its concepts in depth. 
-Size exclusion in the context of a random walk refers to the concept that the movement of an object or particle is restricted by the size of the space in which it is moving.
-In a two-dimensional random walk, for example, the object may be confined to a grid of squares, with each square representing a unit of space. 
+The main subject of this bachelor thesis, is the comparison of the micro- and macroscopic behavior, when agents are allowed to overlap or not.
+In the research of pedestrian dynamics this parameter is called Size Exclusion (SE). In this chapter, we want to define and analyze this parameter and its concepts in depth. 
+Size Exclusion in the context of a Random Walk refers to the concept that the movement of an object or particle is restricted by the size of the space in which it is moving.
+In a two-dimensional Random Walk, for example, the object may be confined to a grid of squares, with each square representing a unit of space. 
 If the object is larger than a single square, it will not be able to move into squares that are already occupied by other objects or obstacles. 
 Here the size of the grid cells is carefully chosen (0.3m), to allow exactly one person in a cell. 
-This effectively limits the possible moves the object can make, and the random walk becomes constrained.
-Size exclusion can also occur in three-dimensional space, such as when an object is moving through a network of interconnected tubes or channels. 
+This effectively limits the possible moves the object can make, and the Random Walk becomes constrained by conflicts, see \autoref{fig:fig5}.
+Size Exclusion can also occur in three-dimensional space, such as when an object is moving through a network of interconnected tubes or channels. 
 The object will be unable to move into spaces that are too small for it to fit through.
-Size exclusion can have significant effects on the behavior of a random walk. For example, if the size of the object is much larger than the size of the squares in the grid, 
-the random walk may be effectively confined to a small area and will not exhibit the expected long-term behavior, such as returning to the starting point after a large number of steps.
-Size exclusion can also influence the rate at which an object moves through a space. If the object is able to move freely, 
+Size Exclusion can have significant effects on the behavior of a Random Walk. For example, if the size of the object is much larger than the size of the squares in the grid, 
+the Random Walk may be effectively confined to a small area and will not exhibit the expected long-term behavior, such as returning to the starting point after a large number of steps.
+Size Exclusion can also influence the rate at which an object moves through a space. If the object is able to move freely, 
 it will likely have a higher average speed than if it is confined to a smaller area or restricted by obstacles.
-In summary, size exclusion refers to the concept that the movement of an object is limited by the size of the space in which it is moving. 
-This can have significant effects on the behavior and speed of the random walk.
-In this thesis we want to apply size exclusion by restricting agents to occupy the same space at any given time step.
-Not only this but also the sequences, of which the agents get updated, makes a difference of the systems overall behaviour.
+
+In this thesis, we want to apply Size Exclusion by restricting agents to occupy the same space at any given time step.
+Not only this but also the sequences, of which the agents get updated, makes a difference of the systems overall behavior.
 We want to compare the behavior of three different approaches in the next section.
-To apply this idea to our master equation we need a factor of the form $ (1- \rho(x,t))$ that is included in $\mathcal{T}$.
+To apply this idea to our master equation, we need a factor of the form $(1- \rho(x,t))$ that is included in $\mathcal{T}$:
+
+\begin{equation}
+ \mathcal{T}(x,t) = \hat{\mathcal{T}}(x,t)(1- \rho(x,t)) 
+\end{equation}
+$\hat{\mathcal{T}}$ includes the remaining logic for the transition rate. 
 If the cell is already occupied this factor and, effectively, the transition probability evaluates to 0. 
 
+\begin{figure}
+   \centering 
+   \begin{tikzpicture}
+      \filldraw [fill=gray!20, draw=gray, thick] (2, 0) rectangle +(2, 2);
+      \filldraw [fill=red!20, draw=red, very thick] (0, 0) rectangle +(2, 2);
+      \filldraw [fill=red!20, draw=red, very thick] (4, 0) rectangle +(2, 2);
+
+      \draw [->] (5, 1)node[above,color=red]{$(x+1, y)$} -- (3.2, 1);
+      \draw [->] (1, 1)node[above,color=red]{$(x-1, y)$} -- (2.8, 1);
+      \draw node[above] at (3, 1) {$(x, y)$};           
+   \end{tikzpicture} 
+   \caption{Two agents with same desired position $(x,y)$}
+   \label{fig:fig5}
+  
+\end{figure}
+
+
 \subsection{Static and dynamic field}
-To model an evacuation scenario, we also want to apply a bias for the direction. This is done using so called static and dynamic fields \autocite{Michi}. 
-The static field incorporates the distance to the disired location e.g exit door for example.
-This can be tricky sometimes if you want to include obsticals in your model. [Bild obsticals]
-One possibility would be to use the number of steps it would take to reach the location. 
-Therefore this static field is also depending on the neighborhood that is used for the model. [Bild static fields]
+To model an evacuation scenario, we also want to apply a bias for the direction. This is done using so-called static and dynamic fields \autocite{Michi}. 
+The static field can incorporates the distance to the disired location e.g exit doors for example, see \autoref{fig:fig6}.
+One possibility would be to use the number of steps it would take to reach the desired location. 
+Therefore this static field is also depending on the neighborhood that is used for the model. 
 To make the model even more sophisticated, 
 we can embed a dynamic field into the transition rate $ \mathcal{T}$, 
 which gets updated on every step and depends on the positions of other agents. 
 This is used to incorporate more complex behavior into the model, for example the Keller-Segel-Model \autocite{keller1970initiation} or chemotaxis, that was used by Kirchner \autocite{kirchner2002simulation}.
-These fields develop the idea of motivation and, depending on the complexity of the used fields, can lead to a mesoscopic scale for the model e.g .
+These fields develop the idea of motivation and, depending on the complexity of the used fields, can lead to a mesoscopic scale e.g a mixed-scale model.
+One example for the choice of $\mathcal{T}$ would be: 
+\begin{equation}
+   \mathcal{T} = N \exp(k_DD)\exp(k_SS)p_Ip_W 
+\end{equation}
+$N$ is a normalization factor, so that $\sum \mathcal{T}_{ij} = 1 + O (\psi(\Delta x,\Delta t))$;
+$D$ and $S$ dynamic and static fields with sensitivity parameters $k_D$ and $k_S$ respectively; 
+$p_I$ the inertia of an agent e.g. the probability of not changing direction is higher;
+and $p_W$ which stands for a Wall potential, because people tend to avoid walking close to walls \cite{nishinari2004extended}.  
+
+\begin{figure}[h]
+   \centering 
+   \includegraphics[width=0.8\linewidth]{content/figures/static_field_with_obstacles.png} 
+   \caption{Dijkstra metric for a static floor field with obstacles. Shade is inversely proportional to the distance to the nearest door, see \autocite{nishinari2004extended}}
+   \label{fig:fig6}
+\end{figure}
 
 \newpage
 \section{Random Walk Simulation}
 In this section we simulate the before discussed CA approach for a variety of choices, for the parameters of the model. 
-As discussed before, when size exclusion is applied, there are multiple ways to incorporate this in the simulation. 
+Since our Grid is finite we need to specify the ruleset for steps of the agents that go outside the grid.
+In this thesis we apply a periodic boundary condition e.g. the position loops around the grid.
+This is analogous to a Topus. 
+As discussed before, when Size Exclusion is applied, there are multiple ways to incorporate this in the simulation. 
 One would be to just sequentially update every agent by the rules given.
 The other one would be to update all agents at the same time, more on that later. 
 The code used to generate these results can be accessed at \href{https://github.com/SomeStein/Bachelor-Thesis}{GitHub Repository}.
@@ -196,12 +267,19 @@ Like this:
 \end{algorithm}
 
 Also very important is the intital position of the agents. Which can be predefined or chosen randomly. 
-choosing a grid size of 15x15, 75 Agents all starting in the middle 25 cells and 30 steps this looks like this: 
-[3 Pictures: frames 1, 15, 30 and colormap]
-Now we can see that the agents are overlappping and swapping positions.
-This is not possible in any physical manner, so we want to add size exclusion to our model.
+We are now choosing a grid size of 15x15, 25 Agents all starting in the middle 25 cells and 30 steps as our model parameters.
+In \autoref{fig:fig3} we can see that the agents are overlappping and swapping positions.
+This is not possible in real life scenarios, so we want to add Size Exclusion to our model.
 
-\subsection{Sequentially updated agents}
+\begin{figure}
+   \begin{center}
+   \includegraphics[width=\linewidth]{content/figures/RW_s0-s30.png} 
+   \caption{Random Walk steps 0 to 30}
+   \label{fig:fig3}
+   \end{center}
+\end{figure}
+
+\subsection{Size Exclusion: Sequentially updated agents}
 The starting point would be to sequentially update the list of agents in a fixed order. 
 This may lead to an undesired effect of prefering agents further to the beginning of the list, 
 as they choose first every time and may occupy a cell, another agent would have chosen. 
@@ -227,29 +305,38 @@ To do this in code, we have to redefine the privious algorithm a bit.
 
 Now before updating the agents position, 
 we need to check whether the chosen cell is occupied or not and if so the agent stays at its cell.
-For comparison this is the situation from before with size exclusion enabled:
-[3 Pictures: frames 1, 15, 30 and colormap] 
+For comparison see \autoref{fig:fig4}, this is the situation from before with Size Exclusion enabled.
 
-\subsection{Scrambled-Sequentially updated agents}
+\begin{figure}
+   \begin{center}
+   \includegraphics[width=\linewidth]{content/figures/RW_SE_s0-s30.png} 
+   \caption{Random Walk with Size Exclusion steps 0 to 30}
+   \label{fig:fig4}
+   \end{center}
+\end{figure}
+
+\subsection{Size Exclusion: Scrambled-Sequentially updated agents}
 To avoid the before mentioned inaccuracy we shuffle the order of which agents get updated. 
 This may be simply implemented by scrambling the list of agents before every time step.
 Since this is a well researched algorithm it will not add much complexity overhead to the simulation. 
 
-\subsection{Parallel updated agents}
-Finally we discuss a new approach of updating the system of agents. Like the name suggests we want to parallize the 
+\subsection{Size Exclusion: Parallel updated agents}
+Finally we discuss a different approach of updating the system of agents. Like the name suggests we want to parallize the 
 updating event such that every agent gets to choose a desired next location. After that there has to be a conflict solution implemented, 
 that takes care of all multiples in this list.
-This is refered to as friction in the research and solves not only the problem of time complexity if well implemnented but 
-also has a little advantage over other models since it can be interpreted as the cooperative behaviour of pedestrians. 
 This conflict can be solved in multiple ways: 
 \begin{itemize}
    \item No one gets to move. This is the most uncooperative scenario and can be adequate in panic situations.
    \item There is always someone that gets to move. This is the most cooperative version and is used to simulate everyday situations, 
    like entering an elevator.
-   \item Something in between. This friction parameter can be chosen in between those two before discussed ways. 
+   \item Something in between. This parameter can be chosen in between those two before discussed ways. 
    This gives a degree of freedom for the modelling process to adjust the ammount of panic. 
 \end{itemize} 
-The Pseudo Code needs to be adjusted. 
+This is refered to as friction in the research and has a little advantage over other models, 
+since it can describe the cooperative behavior of pedestrians. 
+This is helpful to differentiate between normal and panic situations.
+
+For the implementation see \ref{RW_friction}
 
 \begin{algorithm}
    \caption{Random Walk}\label{RW_friction}
@@ -263,10 +350,14 @@ The Pseudo Code needs to be adjusted.
             \If {$board.$is\_not\_empty($dir$)}
                \State \Return
             \EndIf
+            \If {$dir$ not in $already\_checked$}
+               \State \Return
+            \EndIf
             \If {random() $> friction$}
-               \State $indezes \gets $$desired\_dirs.$get\_indezes($dir$)
-               \State $index \gets$  random($indezes$)
+               \State $indices \gets $$desired\_dirs.$get\_indices($dir$)
+               \State $index \gets$  random($indices$)
                \State $agents$[$index$].update\_pos($desired\_dirs$[$index$])
+               \State $already\_checked$.add($desired\_dirs$($indices$))
             \EndIf
          \EndFor
       \EndFor
@@ -275,43 +366,121 @@ The Pseudo Code needs to be adjusted.
    \end{algorithmic}
    \end{algorithm}
 
-Notice if friction is set to 0 it has the same result as the code before. 
-Since choosing a random agent from the conflict or choosing a random sequence for the sequential update makes no differenece. 
-So it would be in our interest to compare the results for changing friction parameters.
-To better see the differnece we now use different inital positions and an overall greater simulation, 
-as the friction effect occours more often the more agents are walking at the same time. 
-[30x30, 300 agnets in middle, at step 100: fr0, fr0.5, fr1] 
-[30x30, 300 agnets in middle, at step 200: fr0, fr0.5, fr1] 
+Here we can see that this different approach has a negligible impact on the simple Random Walking behavior compared to the sequential algorithm \ref{RW_SE}. 
+This is due to the fact, that friction only occurs on the very edge of the crowd. 
+The ones in the middle can not move either way (sequential or parallel) and the ones outside are almost always alowed to move. 
+In the next section, we want to further investigate the differences by taking Monte Carlo simulations. 
 
 \newpage
-\section{Derivation of PDE for macroscopic scale}
-Our goal now is to use the master equation to predict the overall behavior of our model mathematically and compare the results to our simulations. 
-This process leads to a macroscopic scaling, so the results we had before are not quite compatible with the results we will derive from that step.
-We want to compare a change in density rather then trajectories of individual agents. 
+
+\section{Macroscopic scale}
+We now want to make a transition to the macroscopic scale of our model to further compare the results.
+In the last section we saw that the Random Walk has a diffusive behavior. 
+We now want to investigate, how the position probability changes over time.
+For that we use the so-called Monte Carlo method to develop an approximation. 
 
 \subsection{Monte Carlo Simulation}
-To better analyse the effects that are emerging from differnt choices of our parameters, 
-its best to make a transition from micro- to macroscopic scale.
-For that we use a so called Monte Carlo method. We iterate over vast quanteties of simulations and calculate the mean values of each cell 
-to derive a probability density for the occupation of each cell. 
+The Monte Carlo method is implemented by taking multiple passes of the same stochastic simulation and dividing every value by the number of iterations.
+For well-behaved algorithms, this is guaranteed to converge to the probability density \autocite{harrison2010introduction}.
+We will use this method, to compare the results of the Random Walk with and without Size Exclusion
+and investigate changes. 
+First would be the change in density for the simple RW.
+\begin{figure}[h]
+   \label{fig:fig7}
+   \begin{center}
+       \input{content/figures/pgf_figs/RW_MonteCarloRW.pgf}
+   \end{center}
+   \caption{Monte Carlo simulation of the RW on a 100x100 Grid, with 1000 iterations and 400 agents}
+\end{figure}
 
+Like discussed in the section before we can now compare the probability density for the different algorithms.
+For the comparison between sequential and parallel updating, we choose the friction parameter to be 0 so only the parallelity is contributing to the changes, see \ref{fig:fig8}. 
+Lastly we want to compare the effects of friction for a better understanding of the model, see \ref{fig:fig9}.
+\begin{figure}
+   \label{fig:fig8}
+   \begin{center}
+      \input{content/figures/pgf_figs/comparison_SE_friction0.pgf}
+   \end{center}
+   \caption{Absolute difference of Monte Carlo simulations, with 1000 iterations of the RW, with sequentially and parallel updatet agents.}
+\end{figure}
+\begin{figure}
+   \label{fig:fig9}
+   \begin{center}
+      \input{content/figures/pgf_figs/comparison_friction0_friction1.pgf}
+   \end{center}
+   \caption{Absolute difference of Monte Carlo simulations, with 1000 iterations of the RW, with friction $=$ 0 and friction $=$ 1.}
+\end{figure}
+
+\newpage
+\subsection{Derivation of PDE for macroscopic scale}
+We could see a clear diffusive behavior of the Random Walk in the last section, see \ref{fig:fig7}.
+To show this mathematically we need to use the ME of a CA and choose $\mathcal{T} = 1/3$ according to our model.
+We have that:
+
+\begin{equation*}
+   \rho(x,t+\Delta t) - \rho(x,t)  =  \frac{1}{3} (\rho(x + \Delta x, t) - 2 \rho(x,t) + \rho(x - \Delta x, t))
+\end{equation*} 
+We can now assume $\rho$ to be of enough regularity to take the Taylor expansions for the terms $\rho(x + \Delta x, t)$ and $\rho(x - \Delta x, t)$ and we get:
+\begin{equation*}
+   \rho(x, t + \Delta t) = \rho(x, t) + \Delta t \frac{\partial}{\partial t}\rho(x, t) + O((\Delta t)^2)
+\end{equation*} 
+\begin{equation*}
+   \rho(x \pm \Delta x, t) = \rho(x, t) \pm \Delta x \frac{\partial}{\partial x}\rho(x, t) + \frac{1}{2}(\Delta x)^2 \frac{\partial^2}{{\partial x}^2}\rho(x,t) + O((\Delta t)^3)
+\end{equation*} 
+Now we insert these terms back into the ME and for $\frac{\Delta t}{(\Delta x)^2}$ constant and  $\Delta t \rightarrow 0$ this converges to:
+\begin{equation*}
+    \partial_t \rho (x,t) = \frac{1}{3} \partial_{x x} \rho(x,t)
+\end{equation*} 
+This is the heat equation in 1D with an explicit solution for given boundary and initial conditions. 
 The heat equatoion is a partial differantial equation that describes the movement of heat or energy in a given system.
 It is a fundamental equation in the fields of engineering, physics and chemistry.
-
 The heat equation has the form: 
 \begin{equation}
 \frac{\partial u}{\partial t} = \kappa \frac{{\partial}^2u}{{\partial x}^2}
 \end{equation}
-Where $u$ is the temperature of the system, $t$ is time, $x$ is position and $\kappa$ is the thermal conductivity of the material.
-The heat equation can be used to solve for the temperature distribution in a given system at a particular time, or to predict the evolution 
+$u$ is the temperature of the system, $t$ is time, $x$ is position and $\kappa$ is the thermal conductivity of the material.
+The heat equation can be used to describe the temperature distribution in a given system at a particular time, or to predict the evolution 
 of the temperature over time hence the name. It can also be used to determine the rate of heat transfer between two objects, such as during a 
 collision or when one object is placed in contact with another.
-Despite its natural purposes this equation also comes up in the research of pedestrian dynamics as the limit process of systems of random walk agents 
-has a diffusive structure. Here we want to develop this macroscopic view on such systems.
+It is a special case of the diffusion equation, which explains our findings from the Monte Carlo simulation.
+In fact we can compare a 1D plot to the actual solution of the equation.
 
+\begin{figure}
+   \begin{center}
+      \input{content/figures/pgf_figs/comparison_RW_Heat.pgf}
+   \end{center}
+   \label{fig:fig10}
+   \caption{Comparison Monte Carlo simulation of the RW for 10000 iterations and heat equation solution (in red).}
+\end{figure}
+
+Here we took a initial state that is comparable to a high density crowd that starts to move at the same time, like in an elevator.
+Michael Fischer shows that the ME with Size Exclusion factor also leads to the heat equation \autocite{Michi}. 
+But if we compare our Monte Carlo simulations, we can see there is a noticable difference not only in the time it takes to converge, 
+but also the Form. Since the agents in the middle of a crowd can not move for multiple steps, when Size Exclusion is applied.
+It has a little plateau. 
+
+\begin{figure}
+   \begin{center}
+      \input{content/figures/pgf_figs/comparison_SE_Heat.pgf}
+   \end{center}
+   \label{fig:fig11}
+   \caption{Comparison Monte Carlo simulation of the RW with SE for 10000 iterations and heat equation solution (in red).}
+\end{figure}
 
 \newpage
 \section{Conclusion}
+In summary:
+\begin{itemize}
+   \item We have shown that for the choice of a Cellular Automata model for pedestrian dynamics, we have to include a Size Exclusion term to accurately describe pedestrian behavior.
+   \item We needed a conflict solution for multiple agents that have the same desired location at any given time step.
+   \item Concerning this conflict solution, we developed multiple algorithms for the simulation of a given initial condition.
+   \item We also brought up a friction term that is used in research to model the amount of cooperation between pedestrians.
+   \item We used a master equation to mathematically describe our model and used it to derive a function for the probability density e.g to develop a macroscopic model.
+   \item This resulting function is not coherent with our findings of the Monte Carlo simulations.
+   Therefore the results propose that the master equation is not suitable for the conflict solution of Size Exclusion and a new model has to be developed. 
+\end{itemize} 
+This is ongoing research by my supervisor Michael Fischer. 
+A goal would be to develop a model suitable for this kind of conflict solutions. 
 
 
 \newpage

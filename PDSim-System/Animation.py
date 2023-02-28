@@ -56,7 +56,7 @@ def generate_animation(source_path, matrix_width, matrix_height, n_agents, n_ite
       if matrix_height == 1:
          X = list(range(matrix_width))
          Y = matrices[i][0]
-         ax.plot(X,Y)
+         ax.bar(X,Y)
          ax.set_ylim(0,vmax)
          
       elif use_surface:

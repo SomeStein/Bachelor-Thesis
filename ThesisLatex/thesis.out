@@ -3,7 +3,7 @@
 \BOOKMARK [2][-]{subsection.2.1}{Cellular Automata}{section.2}% 3
 \BOOKMARK [2][-]{subsection.2.2}{Social Force}{section.2}% 4
 \BOOKMARK [2][-]{subsection.2.3}{Fluid Dynamics}{section.2}% 5
-\BOOKMARK [2][-]{subsection.2.4}{Agent based}{section.2}% 6
+\BOOKMARK [2][-]{subsection.2.4}{Individual Agent based}{section.2}% 6
 \BOOKMARK [1][-]{section.3}{Cellular Automata}{}% 7
 \BOOKMARK [2][-]{subsection.3.1}{Master Equation}{section.3}% 8
 \BOOKMARK [2][-]{subsection.3.2}{Random Walk}{section.3}% 9
@@ -11,9 +11,10 @@
 \BOOKMARK [2][-]{subsection.3.4}{Static and dynamic field}{section.3}% 11
 \BOOKMARK [1][-]{section.4}{Random Walk Simulation}{}% 12
 \BOOKMARK [2][-]{subsection.4.1}{Random Walk}{section.4}% 13
-\BOOKMARK [2][-]{subsection.4.2}{Sequentially updated agents}{section.4}% 14
-\BOOKMARK [2][-]{subsection.4.3}{Scrambled-Sequentially updated agents}{section.4}% 15
-\BOOKMARK [2][-]{subsection.4.4}{Parallel updated agents}{section.4}% 16
-\BOOKMARK [1][-]{section.5}{Derivation of PDE for macroscopic scale}{}% 17
+\BOOKMARK [2][-]{subsection.4.2}{Size Exclusion: Sequentially updated agents}{section.4}% 14
+\BOOKMARK [2][-]{subsection.4.3}{Size Exclusion: Scrambled-Sequentially updated agents}{section.4}% 15
+\BOOKMARK [2][-]{subsection.4.4}{Size Exclusion: Parallel updated agents}{section.4}% 16
+\BOOKMARK [1][-]{section.5}{Macroscopic scale}{}% 17
 \BOOKMARK [2][-]{subsection.5.1}{Monte Carlo Simulation}{section.5}% 18
-\BOOKMARK [1][-]{section.6}{Conclusion}{}% 19
+\BOOKMARK [2][-]{subsection.5.2}{Derivation of PDE for macroscopic scale}{section.5}% 19
+\BOOKMARK [1][-]{section.6}{Conclusion}{}% 20

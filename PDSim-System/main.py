@@ -14,20 +14,18 @@ workflow is:
 
 """
 
-width = 100
-height = 100
-n_iterations = 300000
+width = 50
+height = 50
+steps = 300
+n_iterations = 1000
 
-#initial_data = [(int(width/2), int(height/2)) for i in range(100)]
-initial_data = [(50,50)]*10
+initial_data = [(i, j) for i in range(width)
+                for j in range(height) if (((i-width/2)**2+(j-height/2)**2) < 380 and ((i-width/2)**2+(j-height/2)**2) > 120)]
 
 model = RandomWalkGrid(width, height, initial_data=initial_data)
 
-model.simulate(n_steps=10, n_iterations=n_iterations,
-               size_exclusion=True, parallel=False, friction=0)
+model.simulate(n_steps=steps, n_iterations=n_iterations,
+               size_exclusion=True, parallel=False, friction=0, force_simulation=True)
 
-generate_animation(model.last_save_path, model.width,
-                   model.height, model.n_agents, vmax=0.3, frame_rate = 2, n_iterations=n_iterations, use_surface=False, fixed_z_height=2)
-
-# generate_animation("PDSim-System/Resources/RW_100x1_a60_s480_i10000_fr0", model.width,
-#                    model.height, model.n_agents, vmax = 4, n_iterations = n_iterations)
+generate_animation(model.last_save_path, model.width, model.height, model.n_agents,
+                   vmax=1, frame_rate=24, n_iterations=n_iterations, use_surface=False, fixed_z_height=4)

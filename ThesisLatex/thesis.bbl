@@ -19,6 +19,33 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global}
+    \entry{bradley1993proposed}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{hash=49cb5ee0d72966b08ec5db67ef90263c}{%
+           family={Bradley},
+           familyi={B\bibinitperiod},
+           given={GE},
+           giveni={G\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Elsevier Publishing Company London}%
+      }
+      \strng{namehash}{49cb5ee0d72966b08ec5db67ef90263c}
+      \strng{fullhash}{49cb5ee0d72966b08ec5db67ef90263c}
+      \strng{bibnamehash}{49cb5ee0d72966b08ec5db67ef90263c}
+      \strng{authorbibnamehash}{49cb5ee0d72966b08ec5db67ef90263c}
+      \strng{authornamehash}{49cb5ee0d72966b08ec5db67ef90263c}
+      \strng{authorfullhash}{49cb5ee0d72966b08ec5db67ef90263c}
+      \field{sortinit}{B}
+      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the International Conference on Engineering for Crowd Safety}
+      \field{title}{A proposed mathematical model for computer prediction of crowd movements and their associated risks}
+      \field{year}{1993}
+      \field{pages}{303\bibrangedash 311}
+      \range{pages}{9}
+    \endentry
     \entry{ehrhardt2013not}{article}{}
       \name{author}{1}{}{%
         {{hash=4a9d47d051580a9bd88e055c45f5a6d3}{%
@@ -71,6 +98,65 @@
       \field{type}{phdthesis}
       \field{year}{2022}
     \endentry
+    \entry{goldstone2005computational}{article}{}
+      \name{author}{2}{}{%
+        {{hash=e0dc18c849b9a7a35e2f9e0f7b2c5bc3}{%
+           family={Goldstone},
+           familyi={G\bibinitperiod},
+           given={Robert\bibnamedelima L},
+           giveni={R\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=8b074ed9bd9e784351f31b5651c486ff}{%
+           family={Janssen},
+           familyi={J\bibinitperiod},
+           given={Marco\bibnamedelima A},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{b29ae1483572c9c7a8199c063ccee4c0}
+      \strng{fullhash}{b29ae1483572c9c7a8199c063ccee4c0}
+      \strng{bibnamehash}{b29ae1483572c9c7a8199c063ccee4c0}
+      \strng{authorbibnamehash}{b29ae1483572c9c7a8199c063ccee4c0}
+      \strng{authornamehash}{b29ae1483572c9c7a8199c063ccee4c0}
+      \strng{authorfullhash}{b29ae1483572c9c7a8199c063ccee4c0}
+      \field{sortinit}{G}
+      \field{sortinithash}{62eb2aa29549e4fdbd3cb154ec5711cb}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Trends in cognitive sciences}
+      \field{number}{9}
+      \field{title}{Computational models of collective behavior}
+      \field{volume}{9}
+      \field{year}{2005}
+      \field{pages}{424\bibrangedash 430}
+      \range{pages}{7}
+    \endentry
+    \entry{harrison2010introduction}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{hash=cc5ea4c4c4104d61fb52f184560f16ca}{%
+           family={Harrison},
+           familyi={H\bibinitperiod},
+           given={Robert\bibnamedelima L},
+           giveni={R\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \strng{namehash}{cc5ea4c4c4104d61fb52f184560f16ca}
+      \strng{fullhash}{cc5ea4c4c4104d61fb52f184560f16ca}
+      \strng{bibnamehash}{cc5ea4c4c4104d61fb52f184560f16ca}
+      \strng{authorbibnamehash}{cc5ea4c4c4104d61fb52f184560f16ca}
+      \strng{authornamehash}{cc5ea4c4c4104d61fb52f184560f16ca}
+      \strng{authorfullhash}{cc5ea4c4c4104d61fb52f184560f16ca}
+      \field{sortinit}{H}
+      \field{sortinithash}{6db6145dae8dc9e1271a8d556090b50a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{AIP Conf Proc}
+      \field{title}{Introduction To Monte Carlo Simulation}
+      \field{volume}{1204}
+      \field{year}{2010}
+      \field{pages}{17\bibrangedash 21}
+      \range{pages}{5}
+    \endentry
     \entry{helbing1995social}{article}{}
       \name{author}{2}{}{%
         {{hash=6f85b2d8868cd1e16ae5c55cf158b6ce}{%
@@ -104,6 +190,108 @@
       \field{year}{1995}
       \field{pages}{4282}
       \range{pages}{1}
+    \endentry
+    \entry{PhysRevE.51.4282}{article}{}
+      \name{author}{2}{}{%
+        {{hash=6f85b2d8868cd1e16ae5c55cf158b6ce}{%
+           family={Helbing},
+           familyi={H\bibinitperiod},
+           given={Dirk},
+           giveni={D\bibinitperiod}}}%
+        {{hash=d203299c4a00fb60fa36186d1cf90947}{%
+           family={Molnár},
+           familyi={M\bibinitperiod},
+           given={Péter},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Physical Society}%
+      }
+      \strng{namehash}{128ecb7e22c3f07c9d957d5f67987284}
+      \strng{fullhash}{128ecb7e22c3f07c9d957d5f67987284}
+      \strng{bibnamehash}{128ecb7e22c3f07c9d957d5f67987284}
+      \strng{authorbibnamehash}{128ecb7e22c3f07c9d957d5f67987284}
+      \strng{authornamehash}{128ecb7e22c3f07c9d957d5f67987284}
+      \strng{authorfullhash}{128ecb7e22c3f07c9d957d5f67987284}
+      \field{sortinit}{H}
+      \field{sortinithash}{6db6145dae8dc9e1271a8d556090b50a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issue}{5}
+      \field{journaltitle}{Phys. Rev. E}
+      \field{month}{5}
+      \field{title}{Social force model for pedestrian dynamics}
+      \field{volume}{51}
+      \field{year}{1995}
+      \field{pages}{4282\bibrangedash 4286}
+      \range{pages}{5}
+      \verb{doi}
+      \verb 10.1103/PhysRevE.51.4282
+      \endverb
+      \verb{urlraw}
+      \verb https://link.aps.org/doi/10.1103/PhysRevE.51.4282
+      \endverb
+      \verb{url}
+      \verb https://link.aps.org/doi/10.1103/PhysRevE.51.4282
+      \endverb
+    \endentry
+    \entry{henderson1971statistics}{article}{}
+      \name{author}{1}{}{%
+        {{hash=26dc9c0776b8bbe6f59816a3d92d304c}{%
+           family={Henderson},
+           familyi={H\bibinitperiod},
+           given={LF},
+           giveni={L\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Nature Publishing Group UK London}%
+      }
+      \strng{namehash}{26dc9c0776b8bbe6f59816a3d92d304c}
+      \strng{fullhash}{26dc9c0776b8bbe6f59816a3d92d304c}
+      \strng{bibnamehash}{26dc9c0776b8bbe6f59816a3d92d304c}
+      \strng{authorbibnamehash}{26dc9c0776b8bbe6f59816a3d92d304c}
+      \strng{authornamehash}{26dc9c0776b8bbe6f59816a3d92d304c}
+      \strng{authorfullhash}{26dc9c0776b8bbe6f59816a3d92d304c}
+      \field{sortinit}{H}
+      \field{sortinithash}{6db6145dae8dc9e1271a8d556090b50a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{nature}
+      \field{number}{5284}
+      \field{title}{The statistics of crowd fluids}
+      \field{volume}{229}
+      \field{year}{1971}
+      \field{pages}{381\bibrangedash 383}
+      \range{pages}{3}
+    \endentry
+    \entry{hughes2002continuum}{article}{}
+      \name{author}{1}{}{%
+        {{hash=f0e105f4230ec14bac8fde7fd62d6aa5}{%
+           family={Hughes},
+           familyi={H\bibinitperiod},
+           given={Roger\bibnamedelima L},
+           giveni={R\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{f0e105f4230ec14bac8fde7fd62d6aa5}
+      \strng{fullhash}{f0e105f4230ec14bac8fde7fd62d6aa5}
+      \strng{bibnamehash}{f0e105f4230ec14bac8fde7fd62d6aa5}
+      \strng{authorbibnamehash}{f0e105f4230ec14bac8fde7fd62d6aa5}
+      \strng{authornamehash}{f0e105f4230ec14bac8fde7fd62d6aa5}
+      \strng{authorfullhash}{f0e105f4230ec14bac8fde7fd62d6aa5}
+      \field{sortinit}{H}
+      \field{sortinithash}{6db6145dae8dc9e1271a8d556090b50a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Transportation Research Part B: Methodological}
+      \field{number}{6}
+      \field{title}{A continuum theory for the flow of pedestrians}
+      \field{volume}{36}
+      \field{year}{2002}
+      \field{pages}{507\bibrangedash 535}
+      \range{pages}{29}
     \endentry
     \entry{keller1970initiation}{article}{}
       \name{author}{2}{}{%
@@ -173,6 +361,51 @@
       \field{pages}{260\bibrangedash 276}
       \range{pages}{17}
     \endentry
+    \entry{nishinari2004extended}{article}{}
+      \name{author}{4}{}{%
+        {{hash=566c84c0ac8e517176ced6c9ebff32ff}{%
+           family={Nishinari},
+           familyi={N\bibinitperiod},
+           given={Katsuhiro},
+           giveni={K\bibinitperiod}}}%
+        {{hash=8f4f603f2953e0709c9028c1a8f9c0c2}{%
+           family={Kirchner},
+           familyi={K\bibinitperiod},
+           given={Ansgar},
+           giveni={A\bibinitperiod}}}%
+        {{hash=f93c50e9969ad711df7a906d81f5416f}{%
+           family={Namazi},
+           familyi={N\bibinitperiod},
+           given={Alireza},
+           giveni={A\bibinitperiod}}}%
+        {{hash=1d9897d81e6826b5e4d91c25a8f4b574}{%
+           family={Schadschneider},
+           familyi={S\bibinitperiod},
+           given={Andreas},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{2}{%
+        {The Institute of Electronics, Information}%
+        {Communication Engineers}%
+      }
+      \strng{namehash}{f15b0d1b02b42a60367c5826169688b1}
+      \strng{fullhash}{21fe3a6d9dde1e480e6815d9b076644f}
+      \strng{bibnamehash}{f15b0d1b02b42a60367c5826169688b1}
+      \strng{authorbibnamehash}{f15b0d1b02b42a60367c5826169688b1}
+      \strng{authornamehash}{f15b0d1b02b42a60367c5826169688b1}
+      \strng{authorfullhash}{21fe3a6d9dde1e480e6815d9b076644f}
+      \field{sortinit}{N}
+      \field{sortinithash}{98cf339a479c0454fe09153a08675a15}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEICE Transactions on information and systems}
+      \field{number}{3}
+      \field{title}{Extended floor field CA model for evacuation dynamics}
+      \field{volume}{87}
+      \field{year}{2004}
+      \field{pages}{726\bibrangedash 732}
+      \range{pages}{7}
+    \endentry
     \entry{loveparade}{misc}{}
       \name{author}{1}{}{%
         {{hash=334c4a4c42fdb79d7ebc3e73b517e6f8}{%
@@ -193,6 +426,49 @@
       \field{note}{[Online; accessed 10-January-2023]}
       \field{title}{{Massenpanik in Duisburg}}
       \field{year}{2010}
+    \endentry
+    \entry{pan2007multi}{article}{}
+      \name{author}{4}{}{%
+        {{hash=a80aa98afcba393d2af22682bd69a3c5}{%
+           family={Pan},
+           familyi={P\bibinitperiod},
+           given={Xiaoshan},
+           giveni={X\bibinitperiod}}}%
+        {{hash=c13620da11e3839077656ed79d57da24}{%
+           family={Han},
+           familyi={H\bibinitperiod},
+           given={Charles\bibnamedelima S},
+           giveni={C\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=87d37a38f629c96a7a3617fab2568fda}{%
+           family={Dauber},
+           familyi={D\bibinitperiod},
+           given={Ken},
+           giveni={K\bibinitperiod}}}%
+        {{hash=815f2078eb47e179ddbc8fdaa05f0f39}{%
+           family={Law},
+           familyi={L\bibinitperiod},
+           given={Kincho\bibnamedelima H},
+           giveni={K\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{f8e7cc6a656cf7305a83044a7b6016f0}
+      \strng{fullhash}{122adbbecda4d06ba2075647e4b65e53}
+      \strng{bibnamehash}{f8e7cc6a656cf7305a83044a7b6016f0}
+      \strng{authorbibnamehash}{f8e7cc6a656cf7305a83044a7b6016f0}
+      \strng{authornamehash}{f8e7cc6a656cf7305a83044a7b6016f0}
+      \strng{authorfullhash}{122adbbecda4d06ba2075647e4b65e53}
+      \field{sortinit}{P}
+      \field{sortinithash}{bb5b15f2db90f7aef79bb9e83defefcb}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Ai \& Society}
+      \field{title}{A multi-agent based framework for the simulation of human and social behaviors during emergency evacuations}
+      \field{volume}{22}
+      \field{year}{2007}
+      \field{pages}{113\bibrangedash 132}
+      \range{pages}{20}
     \endentry
     \entry{zarboutis2004searching}{article}{}
       \name{author}{2}{}{%

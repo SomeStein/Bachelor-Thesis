@@ -2185,15 +2185,25 @@
     <bcf:citekey order="1">loveparade</bcf:citekey>
     <bcf:citekey order="2">zheng2009modeling</bcf:citekey>
     <bcf:citekey order="3">Michi</bcf:citekey>
-    <bcf:citekey order="4">Michi</bcf:citekey>
-    <bcf:citekey order="5">helbing1995social</bcf:citekey>
-    <bcf:citekey order="6">zarboutis2004searching</bcf:citekey>
-    <bcf:citekey order="7">Michi</bcf:citekey>
-    <bcf:citekey order="8">Michi</bcf:citekey>
-    <bcf:citekey order="9">ehrhardt2013not</bcf:citekey>
-    <bcf:citekey order="10">Michi</bcf:citekey>
-    <bcf:citekey order="11">keller1970initiation</bcf:citekey>
-    <bcf:citekey order="12">kirchner2002simulation</bcf:citekey>
+    <bcf:citekey order="4">helbing1995social</bcf:citekey>
+    <bcf:citekey order="5">PhysRevE.51.4282</bcf:citekey>
+    <bcf:citekey order="6">henderson1971statistics</bcf:citekey>
+    <bcf:citekey order="7">bradley1993proposed</bcf:citekey>
+    <bcf:citekey order="8">hughes2002continuum</bcf:citekey>
+    <bcf:citekey order="9">goldstone2005computational</bcf:citekey>
+    <bcf:citekey order="10">zarboutis2004searching</bcf:citekey>
+    <bcf:citekey order="11">pan2007multi</bcf:citekey>
+    <bcf:citekey order="12">Michi</bcf:citekey>
+    <bcf:citekey order="13">Michi</bcf:citekey>
+    <bcf:citekey order="14">ehrhardt2013not</bcf:citekey>
+    <bcf:citekey order="15">Michi</bcf:citekey>
+    <bcf:citekey order="16">keller1970initiation</bcf:citekey>
+    <bcf:citekey order="17">kirchner2002simulation</bcf:citekey>
+    <bcf:citekey order="18">nishinari2004extended</bcf:citekey>
+    <bcf:citekey order="19">nishinari2004extended</bcf:citekey>
+    <bcf:citekey order="20">nishinari2004extended</bcf:citekey>
+    <bcf:citekey order="21">harrison2010introduction</bcf:citekey>
+    <bcf:citekey order="22">Michi</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">
