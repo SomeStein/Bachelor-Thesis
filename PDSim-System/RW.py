@@ -99,6 +99,8 @@ class RandomWalkGrid:  # Grid class for random walk agents
 
    # update position of agents according to parameters
    def update(self, size_exclusion=False, parallel=False, friction=0):
+      
+      
    
       if size_exclusion:
          if parallel:
@@ -113,6 +115,9 @@ class RandomWalkGrid:  # Grid class for random walk agents
                x = (self.agents[i][0] + dx) % self.width
                y = (self.agents[i][1] + dy) % self.height
                desired.append((x, y))
+               
+            for i in range(self.n_agents):
+               
 
                if not (i in already_checked) and self.state[desired[i][1], desired[i][0]] == 0:
 
@@ -150,6 +155,8 @@ class RandomWalkGrid:  # Grid class for random walk agents
             y = (self.agents[i][1] + dy) % self.height
 
             if (self.state[y, x] == 0):
+               
+               
                self.state[self.agents[i][1], self.agents[i][0]] -= 1
                self.agents[i] = (x, y)
                self.state[y, x] += 1
