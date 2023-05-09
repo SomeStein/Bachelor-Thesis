@@ -97,58 +97,24 @@ class RandomWalkGrid:  # Grid class for random walk agents
       # os.system('clear')
       return f"{self.name} - height: {self.height}, width: {self.width} \n\n" + str(self.state) + "\n"
 
-   # update position of agents according to parameters
-   def update(self, size_exclusion=False, parallel=False, friction=0):
+   #algo without size exclusion
+   def size_inclusion(self):
+      for i in range(self.n_agents):
+
+         dx, dy = random.choice(self.choices)
+         x = (self.agents[i][0] + dx) % self.width
+         y = (self.agents[i][1] + dy) % self.height
+
+         self.state[self.agents[i][1], self.agents[i][0]] -= 1
+         self.agents[i] = (x, y)
+         self.state[y, x] += 1
+
+      return self.state
       
+   #algo for sequentially updating agents
+   def sequential(self):
       
-   
-      if size_exclusion:
-         if parallel:
-
-            already_checked = []
-
-            desired = []
-
-            for i in range(self.n_agents):
-
-               dx, dy = random.choice(self.choices)
-               x = (self.agents[i][0] + dx) % self.width
-               y = (self.agents[i][1] + dy) % self.height
-               desired.append((x, y))
-               
-            for i in range(self.n_agents):
-               
-
-               if not (i in already_checked) and self.state[desired[i][1], desired[i][0]] == 0:
-
-                  agent = self.agents[i]
-                  desired_pos = desired[i]
-
-                  if desired.count(desired[i]) == 1:
-
-                     self.state[agent[1], agent[0]] -= 1
-                     self.agents[i] = desired_pos
-                     self.state[agent[1], agent[0]] += 1
-
-                  else:
-                     
-                     if random.random() > friction:
-                        
-                        
-                        indices = find_indices(desired, desired_pos)
-                        index = random.choice(indices)
-
-                        self.state[self.agents[index][1],
-                                   self.agents[index][0]] -= 1
-                        self.agents[index] = desired_pos
-                        self.state[self.agents[index][1],
-                                   self.agents[index][0]] += 1
-
-                        already_checked += indices
-
-            return self.state
-
-         for i in range(self.n_agents):
+      for i in range(self.n_agents):
 
             dx, dy = random.choice(self.choices)
             x = (self.agents[i][0] + dx) % self.width
@@ -162,35 +128,87 @@ class RandomWalkGrid:  # Grid class for random walk agents
                self.state[y, x] += 1
                
 
-         return self.state
+      return self.state
+   
+   #algo for friction based conflict solving
+   def parallel(self,friction):
+      
+      already_checked = []
+      desired = []
+      gotten = [0]*len(self.agents)
 
+      #choose desired position for every agent
       for i in range(self.n_agents):
 
          dx, dy = random.choice(self.choices)
          x = (self.agents[i][0] + dx) % self.width
          y = (self.agents[i][1] + dy) % self.height
+         desired.append((x, y))
+         
+      #check for conflicts and resolve them also create a list for the new positions
+      for i in range(self.n_agents):
+           
+         if not i in already_checked:
+            if self.state[desired[i][1], desired[i][0]] == 0:           
+               if desired.count(desired[i]) == 1:
+                  
+                  gotten[i] = desired[i]
 
-         self.state[self.agents[i][1], self.agents[i][0]] -= 1
-         self.agents[i] = (x, y)
-         self.state[y, x] += 1
+               else:
+                  
+                  indices = find_indices(desired, desired[i])
+                  already_checked += indices
+                  for index in indices:
+                     gotten[index] = self.agents[index]
+                  
+                  if random.random() > friction:
+      
+                     index = random.choice(indices)
+                     gotten[index] = desired[index]
+            else:
+               
+               gotten[i] = self.agents[i]      
+                  
+                  
+      #update positions of agents based on "gotten" list 
+      for i in range(self.n_agents):
+         agent = self.agents[i]
+         gotten_pos = gotten[i]
+         
+         self.state[agent[1], agent[0]] -= 1
+         self.agents[i] = gotten_pos
+         self.state[agent[1], agent[0]] += 1
 
       return self.state
+      
+    # update position of agents according to parameters
+   def update(self, size_exclusion=False, parallel=False, friction=0):
+      
+      if size_exclusion:
+         if parallel:
+            return self.parallel(friction)
+         else: 
+            return self.sequential()
+      else:
+         return self.size_inclusion()
 
    # makes a monte carlo simulation saves everything in desired path and gives status updates of the simulation in terminal
-   def simulate(self, n_steps=1, n_iterations=1, size_exclusion=False, parallel=False, friction=0, path=None, force_simulation = False):
+   def simulate(self, n_steps=1, n_iterations=1, size_exclusion=False, parallel=False, friction=0, folder_path=None, force_simulation = False):
 
       #clearing terminal
       os.system("clear")
       
-      if not path:
-         if size_exclusion and parallel:
-            path = f"PDSim-System/Resources/RW_{self.width}x{self.height}_a{self.n_agents}_s{n_steps}_i{n_iterations}_fr{friction}"
+      if not folder_path:
+         folder_path = "PDSim-System/Resources"
+      if size_exclusion and parallel:
+         path = folder_path + f"/RW_{self.width}x{self.height}_a{self.n_agents}_s{n_steps}_i{n_iterations}_fr{friction}"
+         
+      elif size_exclusion:
+         path = folder_path + f"/RW_{self.width}x{self.height}_a{self.n_agents}_s{n_steps}_i{n_iterations}_SE"
+         
+      else:
+         path = folder_path +  f"/RW_{self.width}x{self.height}_a{self.n_agents}_s{n_steps}_i{n_iterations}_SI"
             
-         elif size_exclusion:
-            path = f"PDSim-System/Resources/RW_{self.width}x{self.height}_a{self.n_agents}_s{n_steps}_i{n_iterations}_SE"
-            
-         else:
-            path = f"PDSim-System/Resources/RW_{self.width}x{self.height}_a{self.n_agents}_s{n_steps}_i{n_iterations}"
             
       self.last_save_path = path
             
